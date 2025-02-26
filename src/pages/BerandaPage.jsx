@@ -8,6 +8,7 @@ import Slider from "react-slick";
 import "../dist/css/main.css";
 import MitraComponent from "../components/MitraComponent";
 import DokumentasiComponent from "../components/DokumentasiComponent";
+import TestimoniComponent from "../components/TestimoniComponent";
 
 const HomePage = () => {
   let navigate = useNavigate();
@@ -305,6 +306,11 @@ const HomePage = () => {
       <section className="dokumentasi-section py-5">
         <DokumentasiComponent />
       </section>
+
+      <section className="testimoni-section py-5">
+        <TestimoniComponent />
+      </section>
+
 
       <section className="hubungi-section py-5" style={{ backgroundColor: "#f8f9fa" }}>
         <Container>

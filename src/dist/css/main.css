@@ -1200,3 +1200,44 @@ h2 {
 .mitra-lg img:hover {
   transform: scale(1.05);
 }
+
+
+/* TESTIMONI BERANDA */
+/* Testimoni.css */
+
+.testimoni-section {
+  background-color: #f9f9f9;
+}
+
+.testimoni-section h2 {
+  font-weight: bold;
+}
+
+/* Slider Item */
+.testimoni-item {
+  padding: 10px;
+}
+
+/* Video Wrapper */
+.video-wrapper {
+  overflow: hidden;
+  position: relative;
+  padding-top: 56.25%;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+}
+
+.video-wrapper:hover {
+  transform: scale(1.05);
+}
+
+.video-wrapper iframe {
+  border: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
