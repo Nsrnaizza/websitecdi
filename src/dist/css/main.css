@@ -335,13 +335,35 @@ header::before {
 /*STYLE FOOTER*/
 
 /* Card Section Styles */
+.card {
+  max-width: 100%;
+  height: 70%;
+  overflow: hidden;
+  position: relative;
+}
+
+.card .card-body {
+  width: 20px;
+  margin: auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-img-top {
+  width: 90%;
+  max-height: auto;
+  margin: 10px auto;
+}
+
 .cards-section {
   padding-top: 50px;
   padding-bottom: 50px;
 }
 .card-container {
   flex: 0 0 auto;
-  width: calc(100% / 4 - 20px); /* Adjust the width as needed */
+  width: calc(100% / 4 - 20px);
   margin: 10px;
   aspect-ratio: 4 / 3;
   display: flex;
@@ -376,6 +398,15 @@ header::before {
   transform: translateY(-10px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
+
+.card.bg-light {
+  margin: auto; /* Membuat card putih ada di tengah */
+  height: 120px; /* Sesuaikan tinggi card putih */
+  width: 90%; /* Bisa diatur agar tidak terlalu kecil */
+  display: flex;
+  justify-content: center;
+}
+
 
 /* Button Styles */
 .btn-primary {
@@ -625,9 +656,21 @@ header::before {
   padding: 3rem 0;
 }
 
+.mitra-section .feature-item {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Grid responsif */
+  gap: 15px; /* Jarak antar logo */
+  justify-content: center;
+  align-items: center;
+}
+
+.mitra-section .feature-item img:hover {
+  transform: scale(1.1); /* Efek zoom saat hover */
+}
+
 .card.custom {
   border: none;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(220, 200, 225);
 }
 
 .section-header {
@@ -647,6 +690,7 @@ header::before {
 }
 .mitra-lg .col-2 {
   padding: 10px;
+
 }
 
 .mitra-lg img {
