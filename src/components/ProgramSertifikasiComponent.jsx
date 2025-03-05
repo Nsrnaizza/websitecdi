@@ -67,7 +67,7 @@ const ProgramSertifikasiComponent = () => {
               <div className="col-lg-3 col-md-6 mb-4" key={index}>
                 <div className="card border-0 shadow-sm mb-3">
                   <img src={program.img} className="card-img-top w-100" alt={program.title} />
-                  <div className="card-body">
+                  
                     <p className="fw-bold m-0 text-truncate d-block">{program.title}</p>
                     <p className="text-truncate-3 d-none d-md-block">{program.description}</p>
                     <a href={program.link} className="btn btn-primary">
@@ -75,7 +75,7 @@ const ProgramSertifikasiComponent = () => {
                     </a>
                   </div>
                 </div>
-              </div>
+              
             ))}
           </div>
           <div className="row mt-3 justify-content-center" id="pagination">

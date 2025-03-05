@@ -7,7 +7,7 @@ const MisiComponent = () => {
         <div className="p-4 rounded-1 bg-misi">
           <img className="logo-visi" src="https://campusdigital.id/assets/images/icon/guidance.png" alt="icon" />
         </div>
-        <div className="card-body">
+        
           <h1>Misi</h1>
           <ul className="text-start">
             <li>Menyediakan layanan program Pendidikan dan pelatihan yang berkualitas</li>
@@ -18,7 +18,7 @@ const MisiComponent = () => {
           </ul>
         </div>
       </div>
-    </div>
+    
   );
 };
 

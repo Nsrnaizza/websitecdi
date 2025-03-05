@@ -920,7 +920,7 @@ header::before {
   font-weight: 400;
   color: #555;
   margin-bottom: 2rem;
-  transition: color 0.3s ease-in-out;
+  transition: color 0.2s ease-in-out;
 }
 
 .header-one .img-header {
@@ -928,7 +928,7 @@ header::before {
   height: auto;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.2s ease-in-out;
 }
 
 .header-one .img-header:hover {
@@ -1021,6 +1021,12 @@ header::before {
   width: 100%;
 }
 
+.card-body {
+  display: flex;
+  flex-direction: column;align-items: center;
+  text-align: center;
+}
+
 .card-body h1 {
   font-size: 24px;
   margin-bottom: 15px;
@@ -1028,7 +1034,7 @@ header::before {
 
 .card-body p,
 .card-body ul {
-  font-size: 14px;
+  font-size: 20px;
   margin: 0;
 }
 
@@ -1115,11 +1121,11 @@ header::before {
 .list-unstyled li {
   display: flex;
   align-items: start;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .list-unstyled li span {
-  margin-right: 0.5rem;
+  margin-right: 0.3rem;
   color: #007bff;
   font-size: 1.5rem;
 }
@@ -1127,7 +1133,7 @@ header::before {
 .list-unstyled li p {
   margin: 0;
   font-size: 1rem;
-  line-height: 1.5;
+  line-height: 1;
 }
 /* Fasilitas */
 
@@ -1285,3 +1291,5 @@ h2 {
   width: 100%;
   height: 100%;
 }
+
+/*Galery*?
