@@ -18,6 +18,8 @@ import VisiMisiPage from "./pages/TentangKami/VisiMisiPage";
 import BudayaKerjaPage from "./pages/TentangKami/BudayaKerjaPage";
 import FasilitasKeunggulanPage from "./pages/TentangKami/FasilitasKeunggulanPage";
 import ProgramSertifikasiPage from "./pages/ProgramSertifikasiPage";
+import RegisterPage from "./pages/RegisterPage";
+import LoginPage from "./pages/LoginPage";
 
 function App() {
   return (
@@ -39,6 +41,8 @@ function App() {
         <Route path="/program-corporate" Component={CorporateProgramPage} />
         <Route path="/program-profesi" Component={ProfesiProgramPage} />
         <Route path="/program-sertifikasi" Component={ProgramSertifikasiPage} />
+        <Route path="/register" Component={RegisterPage}/>
+        <Route path="/login" Component={LoginPage}/>
       </Routes>
 
       <FooterComponent />

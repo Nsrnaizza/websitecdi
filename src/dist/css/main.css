@@ -1292,4 +1292,63 @@ h2 {
   height: 100%;
 }
 
-/*Galery*?
+/*register*/
+
+.register-container {
+  max-width: 200px;
+  margin: auto;
+  padding: 4px;
+  background: #F8F9FA;
+}
+
+.register-row{
+  max-width: 100px;
+  padding: 10px;
+  align-items: justify;
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.logo {
+  width: 100px;
+}
+
+.title {
+  font-weight: bold;
+}
+
+.custom-green {
+  background-color: #D1E7DD; /* Warna hijau Bootstrap */
+  color: white;
+}
+
+
+.custom-yellow {
+  font-size: 1rem;
+  background-color: #FFF3CD;
+}
+
+.form-card {
+  border-radius: 14px;
+  width: 30px;
+  display: flex;
+}
+
+
+.form-section-title {
+  font-weight: bold;
+}
+
+.custom-green-btn {
+  background-color: #D1E7DD !important;
+  border-color: #D1E7DD !important;
+  color: #000 !important;
+}
+
+.img-fluid{
+  max-width: 100%;
+  height: auto;
+}
