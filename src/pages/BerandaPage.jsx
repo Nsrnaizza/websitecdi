@@ -74,23 +74,23 @@ const HomePage = () => {
 
       <section className="cards-section py-5">
         <Container>
-          <h1 className="text-center mb-5" style={{ color: "#330369" }}>
+          <h1 className="text-center mb-4" style={{ color: "#330369"}}>
             Program Reguler
           </h1>
-          <Row>
+          <Row className="justify-content-center g-4">
             {[
-              { image: "src/assets/img/card1.png", title: "Program 1", text: "Description 1" },
-              { image: "src/assets/img/card2.png", title: "Program 2", text: "Description 2" },
-              { image: "src/assets/img/card3.png", title: "Program 3", text: "Description 3" },
-              { image: "src/assets/img/card4.png", title: "Program 4", text: "Description 4" },
+              { image: "src/assets/img/card5.png", text: "Digital marketing adalah serangkaian strategi pemasaran yang...", link:"reguler/digital-marketing" },
+              { image: "src/assets/img/card6.png", text: "Program pelatihan dan pembelajaran praktis desain grafis. Anda aka...", link:"reguler/graphic-design"  },
+              { image: "src/assets/img/card7.png", text: "Program pelatihan dan pembelajaran praktis komputer perkantoran...", link:"reguler/operator-komputer"  },
+              { image: "src/assets/img/card8.png", text: "Program pelatihan dan pembelajaran membuat website. Anda...", link:"reguler/web-designer"  },
             ].map((card, index) => (
               <Col xs={12} sm={6} md={4} lg={3} key={index}>
-                <a href="#" className="w-100" title={card.title} alt={card.title} target="_blank">
-                  <motion.div className="card bgc border-0 shadow " style={{ width: "100%", height: "auto", backgroundColor: "#330369" }} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                    <img src={card.image} className="card-img-top w-100 owl-lazy" alt={card.title} />
-                    <div className="card bg-light m-3">
-                      <div className="card-body d-flex align-items-center justify-content-center">
-                        <p className="text-center" style={{ color: "black", textDecoration: "none" }}>
+                <a href={card.link} className="w-100 text-decoration-none">
+                  <motion.div className="card border-0 shadow mb-3" style={{ borderRadius:"15px", overflow: "hidden", backgroundColor: "#330369" }} >
+                    <img src={card.image} className="card-img-top w-100 " style={{height:"180px", objectFit:"cover"}} />
+                    <div className="card bg-light mx-3 my-2 p-0 rounded" style={{minHeight:"100px"}}>
+                      <div className=" text-truncate-2 m-2 p-1">
+                        <p style={{ color: "black", textDecoration: "none", margin:0, fontSize:"15px", fontWeight:"normal", textAlign:"left", display:"-webkit-box", WebkitBoxOrient:"vertical", WebkitLineClamp:"3", overflow:"hidden", textOverflow:"ellipsis", lineHeight:"1.4em", height:"4.23m" }}>
                           {card.text}
                         </p>
                       </div>
@@ -101,12 +101,13 @@ const HomePage = () => {
             ))}
           </Row>
           <div className="text-center mt-4">
-            <Button variant="link" onClick={() => navigate("/program-reguler")}>
+            <Button variant="link" onClick={() => navigate("/program-corporate")}>
               Lihat Semua
             </Button>
           </div>
         </Container>
       </section>
+
 
       <section className="cards-section py-5">
         <Container>
@@ -115,18 +116,18 @@ const HomePage = () => {
           </h1>
           <Row>
             {[
-              { image: "src/assets/img/card5.png", title: "Program 3", text: "Description 3" },
-              { image: "src/assets/img/card6.png", title: "Program 4", text: "Description 4" },
-              { image: "src/assets/img/card7.png", title: "Program 5", text: "Description 5" },
-              { image: "src/assets/img/card8.png", title: "Program 6", text: "Description 6" },
+              { image: "src/assets/img/card5.png", title: "Program 3", text: "Program pelatihan dan pembelajaran praktis pemasaran digital. And...", link: "corporate/kompetensi-digital-marketing"},
+              { image: "src/assets/img/card6.png", title: "Program 4", text: "Program pelatihan dan pembelajaran praktis desain grafis. Anda aka...", link: "corporate/praktek-kerja-industri"},
+              { image: "src/assets/img/card7.png", title: "Program 5", text: "Mengikuti program kelas industri teknologi digital akan memberikan Anda...", link:"corporate/industri-teknologi-digital"},
+              { image: "src/assets/img/card8.png", title: "Program 6", text: "Membantu mengembangkan metari pelatihan yang...", link:"corporate/training-for-trainer"},
             ].map((card, index) => (
               <Col xs={12} sm={6} md={4} lg={3} key={index}>
-                <a href="#" className="w-100" title={card.title} alt={card.title} target="_blank">
-                  <motion.div className="card bgc border-0 shadow mb-3" style={{ width: "100%", height: "auto", backgroundColor: "#330369" }} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                    <img src={card.image} className="card-img-top w-100 owl-lazy" alt={card.title} />
-                    <div className="card bg-light m-3">
-                      <div className="card-body d-flex align-items-center justify-content-center">
-                        <p className="text-center" style={{ color: "black", textDecoration: "none" }}>
+                <a href={card.link} className="w-100 text-decoration-none" title={card.title}>
+                  <motion.div className="card border-0 shadow mb-3" style={{ borderRadius:"15px", overflow: "hidden", backgroundColor: "#330369" }} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                    <img src={card.image} className="card-img-top w-100 " alt={card.title} style={{height:"180px", objectFit:"cover"}} />
+                    <div className="card bg-light mx-3 my-2 p-0 rounded" style={{minHeight:"100px"}}>
+                      <div className="text-truncate-2 m-2 p-1">
+                        <p style={{ color: "black", textDecoration: "none", margin:0, fontSize:"15px", fontWeight:"normal", textAlign:"left", display:"-webkit-box", WebkitBoxOrient:"vertical", WebkitLineClamp:"3", overflow:"hidden", textOverflow:"ellipsis", lineHeight:"1.4em", height:"4.23m" }}>
                           {card.text}
                         </p>
                       </div>
@@ -151,16 +152,16 @@ const HomePage = () => {
           </h1>
           <Row>
             {[
-              { image: "src/assets/img/card9.png", title: "Program 7", text: "Description 7" },
-              { image: "src/assets/img/card10.png", title: "Program 8", text: "Description 8" },
+              { image: "src/assets/img/card9.png", title: "Program 7", text: "Dengant Mengikuti program Digital Technopreneur, peserta...", link:"profesi/technopreneur" },
+              { image: "src/assets/img/card10.png", title: "Program 8", text: "Program pendidikan dan pelatihan selama satu tahun setara D1...", link:"profesi/digital-marketer" },
             ].map((card, index) => (
               <Col xs={12} sm={6} md={4} lg={3} key={index}>
-                <a href="#" className="w-100" title={card.title} alt={card.title} target="_blank">
-                  <motion.div className="card bgc border-0 shadow mb-3" style={{ width: "100%", height: "auto", backgroundColor: "#330369" }} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                    <img src={card.image} className="card-img-top w-100 owl-lazy" alt={card.title} />
-                    <div className="card bg-light m-3">
-                      <div className="card-body d-flex align-items-center justify-content-center">
-                        <p className="text-center" style={{ color: "black", textDecoration: "none" }}>
+                <a href={card.link} className="w-100 text-decoration-none" title={card.title}>
+                  <motion.div className="card border-0 shadow mb-3" style={{ borderRadius:"15px", overflow: "hidden", backgroundColor: "#330369" }} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                    <img src={card.image} className="card-img-top w-100 " alt={card.title} style={{height:"180px", objectFit:"cover"}} />
+                    <div className="card bg-light mx-3 my-2 p-0 rounded" style={{minHeight:"100px"}}>
+                      <div className="text-truncate-2 m-2 p-1">
+                        <p style={{ color: "black", textDecoration: "none", margin:0, fontSize:"15px", fontWeight:"normal", textAlign:"left", display:"-webkit-box", WebkitBoxOrient:"vertical", WebkitLineClamp:"3", overflow:"hidden", textOverflow:"ellipsis", lineHeight:"1.4em", height:"4.23m" }}>
                           {card.text}
                         </p>
                       </div>
@@ -186,12 +187,12 @@ const HomePage = () => {
           <p className="text-center text-muted mb-5">Campus Digital memiliki mentor yang ahli di bidangnya</p>
           <Slider {...mentorSettings}>
             {[
-              { name: "Faris Fanani", role: "Digital Business Strategy", image: "src/assets/img/foto.jpg" },
-              { name: "Randy Rahman Hussen", role: "Research Expert", image: "src/assets/img/foto.jpg" },
-              { name: "A. Haris Hanifudin", role: "Blogger Marketing", image: "src/assets/img/foto.jpg" },
-              { name: "M. Syarifuddin Yusuf", role: "Social Media Specialist", image: "src/assets/img/foto.jpg" },
-              { name: "Joko Santoso", role: "Digital Analyst", image: "src/assets/img/foto.jpg" },
-              { name: "Satria Aji Wicaksono", role: "Marketplace Specialist", image: "src/assets/img/foto.jpg" },
+              { name: "Faris Fanani", role: "Digital Business Strategy", image: "https://campusdigital.id/assets/images/mentor/1600313439.jpeg" },
+              { name: "Randy Rahman Hussen", role: "Research Expert", image: "https://campusdigital.id/assets/images/mentor/2021-06-15-15-39-41.png" },
+              { name: "A. Haris Hanifudin", role: "Blogger Marketing", image: "https://campusdigital.id/assets/images/mentor/2021-09-29-09-11-46.png" },
+              { name: "M. Syarifuddin Yusuf", role: "Social Media Specialist", image: "https://campusdigital.id/assets/images/mentor/2021-09-29-09-08-18.png" },
+              { name: "Joko Santoso", role: "Digital Analyst", image: "https://campusdigital.id/assets/images/mentor/2021-09-29-09-10-19.png" },
+              { name: "Satria Aji Wicaksono", role: "Marketplace Specialist", image: "https://campusdigital.id/assets/images/mentor/2021-09-29-09-11-15.png" },
             ].map((mentor, index) => (
               <div
                 className="mentor-card text-center p-3 mx-2"
@@ -223,10 +224,12 @@ const HomePage = () => {
           <Row className="g-4">
             <Col md={6}>
               <Accordion defaultActiveKey="0">
-                <Accordion.Item eventKey="0">
+              <Accordion.Item eventKey="1">
                   <motion.div initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
-                    <Accordion.Header className="accordion-header-1">Anda Pegawai, Karyawan, Pengusaha Atau Siapapun Yang Ingin Menambah Penghasilan?</Accordion.Header>
-                    <Accordion.Body>Kami ada solusinya!! Belajar Online Marketing bersama kami di Campus Digital, di program Kursus Digital Marketing. Jadikan Bisnis Online sebagai sumber penghasilan Anda!!</Accordion.Body>
+                    <Accordion.Header className="accordion-header-1">Anda Pegawai, Karyawan, Pengusaha atau Siapapun yang Ingin Menambah Penghasilan?</Accordion.Header>
+                    <Accordion.Body>
+                    Kami ada solusinya!! Belajar Online Marketing bersama kami di Campus Digital, di program Kursus Digital Marketing. Jadikan Bisnis Online sebagai sumber penghasilan Anda!!
+                    </Accordion.Body>
                   </motion.div>
                 </Accordion.Item>
               </Accordion>
@@ -325,7 +328,7 @@ const HomePage = () => {
               <p className="text-muted mb-4" style={{ fontSize: "0.9rem" }}>
                 Customer Service Kami Siap Membantu Anda untuk Mendapatkan Informasi Lebih Lanjut Mengenai Program-Program Campus Digital
               </p>
-              <Button variant="success" className="d-flex align-items-center" href="https://wa.me/nomor_wa_anda" target="_blank" style={{ borderRadius: "5px", fontSize: "0.9rem" }}>
+              <Button variant="success" className="d-flex align-items-center" href="https://wa.me/62816343742"  style={{ borderRadius: "5px", fontSize: "0.9rem", width:"fit-content", padding:"8px 12px", display:"inline-flex" }}>
                 <i className="bi bi-whatsapp" style={{ fontSize: "1.2rem", marginRight: "10px" }}></i>
                 Hubungi Kami via WhatsApp
               </Button>

@@ -25,4 +25,4 @@ const VisiMisiPage = () => {
   );
 };
 
-export default VisiMisiPage;
+export default VisiMisiPage;

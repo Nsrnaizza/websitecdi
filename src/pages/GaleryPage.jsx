@@ -1,6 +1,7 @@
 import { Container, Row, Col } from "react-bootstrap";
-import HeroImage from "../assets/img/afiliasi.png"; 
+import HeroImage from "../assets/img/afiliasi.png";
 import { useNavigate } from "react-router-dom";
+import GaleryProgram from "../components/GaleryComponent";
 
 function GaleryPage() {
   return (
@@ -19,11 +20,13 @@ function GaleryPage() {
             </Col>
           </Row>
         </Container>
-
-        <section className="Galery-section py-5">
-          <Container></Container>
-        </section>
       </header>
+
+      <div className="Galery-section py-5">
+        <Container>
+          <GaleryProgram />
+        </Container>
+      </div>
     </div>
   );
 }

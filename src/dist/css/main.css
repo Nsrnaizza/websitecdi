@@ -270,6 +270,9 @@ header::before {
 
 /*STYLE AFILIASI*/
 
+/* CABANG */
+/* CABANG */
+
 /* STYLE FOOTER */
 .footer {
   background-color: #4a0f6e;
@@ -513,6 +516,26 @@ header::before {
 .hero-img.animated-hero:hover {
   transform: scale(1.05);
 }
+.card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Memastikan konten sejajar */
+  align-items: center;
+  text-align: center;
+  padding: 16px;
+  height: 100%;
+}
+
+
+.card-text {
+  font-size: 0.75rem;
+  color: #444;
+  text-align: justify;
+  line-height: 1.5;
+  min-height: 60px; /* Membuat tinggi teks sejajar */
+  max-height: 80px;
+  overflow: hidden;
+}
 
 /* CARD SECTION STYLES PROGRAM REGULER */
 
@@ -575,9 +598,8 @@ header::before {
 }
 
 .privat-section h1 {
-  font-size: 2.5em;
-  font-weight: bold;
-  color: #330369;
+  font-size: 2rem;
+  /* font-weight: bold; */
   margin-bottom: 30px;
 }
 
@@ -591,22 +613,11 @@ header::before {
 }
 
 /* Accordion Header */
-.accordion-header {
-  background-color: #e2c7fe;
-  color: #330369;
-  font-weight: bold;
-  font-size: 1.1em;
-}
 
 .accordion-button {
-  background: transparent;
-  color: #330369;
-  font-weight: bold;
-  text-align: left;
-  padding: 15px 20px;
+  background-color: transparent !important;
   border: none;
   box-shadow: none;
-  transition: background 0.3s ease;
 }
 
 .accordion-button:not(.collapsed) {
@@ -618,36 +629,51 @@ header::before {
   box-shadow: none;
 }
 
-/* Accordion Body */
-.accordion-body {
-  background-color: #fff;
-  padding: 20px;
-  color: #555;
-  line-height: 1.6;
-  font-size: 0.95em;
+/* Warna latar belakang berbeda untuk tiap item */
+.accordion-header-1 {
+  background-color: #f8d7da; /* Merah muda */
 }
 
-/* Hover and Active States */
-.accordion-button:hover {
-  background-color: #d3b8f7;
-  color: #fff;
+.accordion-header-2 {
+  background-color: #d4edda; /* Hijau muda */
 }
 
-.accordion-item.active .accordion-button {
-  background-color: #330369;
-  color: #fff;
+.accordion-header-3 {
+  background-color: #cce5ff; /* Biru muda */
 }
 
-/* Responsive */
-@media (max-width: 576px) {
-  .privat-section h1 {
-    font-size: 2em;
-  }
-
-  .accordion-button {
-    font-size: 0.9em;
-  }
+.accordion-header-4 {
+  background-color: #fff3cd; /* Kuning muda */
 }
+
+/* Hover effect */
+.accordion-header-1:hover {
+  background-color: #f5c6cb;
+}
+
+.accordion-header-2:hover {
+  background-color: #c3e6cb;
+}
+
+.accordion-header-3:hover {
+  background-color: #b8daff;
+}
+
+.accordion-header-4:hover {
+  background-color: #ffeeba;
+}
+
+/* Styling agar teks lebih jelas */
+.accordion-header-1, 
+.accordion-header-2, 
+.accordion-header-3, 
+.accordion-header-4 {
+  color: #333;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 5px;
+}
+
 /*ACCORDION CONTAINER*/
 
 /*STYLE MITRA KAMI*/
@@ -664,13 +690,13 @@ header::before {
   align-items: center;
 }
 
-.mitra-section .feature-item img:hover {
-  transform: scale(1.1); /* Efek zoom saat hover */
-}
+/* .mitra-section .feature-item img:hover {
+  transform: scale(1.1); Efek zoom saat hover
+} */
 
 .card.custom {
   border: none;
-  box-shadow: 0 4px 8px rgba(220, 200, 225);
+  box-shadow: 0 4px 8px rgb(244, 207, 253);
 }
 
 .section-header {
@@ -696,12 +722,12 @@ header::before {
 .mitra-lg img {
   width: 65%;
   height: auto;
-  transition: transform 0.3s ease;
+
 }
 
-.mitra-lg img:hover {
+/* .mitra-lg img:hover {
   transform: scale(1.1);
-}
+} */
 
 .mitra-lg .col-2 {
   flex: 0 0 16.6667%;
@@ -752,8 +778,7 @@ header::before {
 
 /*Galery*/
 .galery-item {
-  border: none;
-  transition: transform 0.3s;
+  min-height: 100%;
 }
 
 .galery-item:hover {
@@ -779,6 +804,14 @@ header::before {
 .galery-item p {
   margin: 0;
   font-size: 0.9rem;
+}
+
+.fixed-img{
+  object-fit: cover;
+  height: 200px;
+}
+.mb-3{
+  margin-bottom: 10-x !important;
 }
 
 /* Dokumentasi Section */
@@ -911,8 +944,8 @@ header::before {
   font-size: 2.5rem;
   font-weight: 700;
   color: #333;
-  margin-bottom: 1rem;
-  transition: color 0.3s ease-in-out;
+  margin-bottom: 2rem;
+  /* transition: color 0.3s ease-in-out; */
 }
 
 .header-one h4 {
@@ -1203,6 +1236,11 @@ h2 {
 
 .card {
   border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
 }
 
 .card-img-top {
@@ -1212,6 +1250,11 @@ h2 {
 
 .card-body {
   padding: 15px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
 }
 
 .card-body p {
@@ -1229,8 +1272,20 @@ h2 {
   line-clamp: 3;
   -webkit-box-orient: vertical;
 }
+.small-title{
+  font-size: 17px;
+}
+.small-description{
+  font-size: 14px;
+  margin-top: 10px;
+}
 
+.btn-primary:hover{
+  background-color: #d3b8f7;
+  border-color: #d3b8f7;
+}
 /* Sertifikasi */
+
 
 /* Mitra Component */
 
@@ -1247,14 +1302,10 @@ h2 {
 
 
 /* TESTIMONI BERANDA */
-/* Testimoni.css */
+
 
 .testimoni-section {
   background-color: #f9f9f9;
-}
-
-.testimoni-section h2 {
-  font-weight: bold;
 }
 
 /* Slider Item */
@@ -1285,3 +1336,400 @@ h2 {
   width: 100%;
   height: 100%;
 }
+/* Testimoni.css */
+
+/* Magang Program */
+
+.mb-5 {
+  margin-bottom: 3rem !important;
+}
+
+.mod {
+  margin-top: 2rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgbq(0,0,0,0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.card-text {
+  font-size: 1.5rem;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.card:hover{
+  transform: scale(1.05);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.btn-success {
+  background-color: #d3b8f7;
+  border-color: #d3b8f7;
+}
+
+.btn-success:hover {
+  background-color: #d3b8f7;
+  border-color: #d3b8f7;
+}
+
+.text-mitra {
+  font-size: 1rem;
+  color: #333;
+}
+.custom-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  padding: 15px;
+  height: 100%;
+}
+
+.btn-shatsapp{
+  display: flex; 
+  width: 100%; /* Sesuaikan agar tidak sempit */
+  text-align: center;
+  justify-content: center;
+}
+.chat.btn-success {
+  background-color: #9ae2a4;
+  border-color: #9ae2a4;
+  width: auto;
+  min-width: 120px;
+  padding: 8px 16px;
+  display: block;
+  margin: 10px auto;
+  text-align: center;
+  transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.chat.btn-success:hover {
+  background-color: #29bb3d;
+  transform: scale(1.05);
+}
+
+.chat.btn-success:active {
+  transform: scale(0.95);
+}
+
+
+
+
+
+/* Magang Program */
+
+
+/* Digital Marketing */
+
+.page-program {
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+.hero-section2 {
+  background: url("https://campusdigital.id/assets/images/background/b1bde199d76dd22fc49aa288b0d5ab10.svg") no-repeat center;
+  background-size: cover;
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  padding: 60px 0;
+  color: white;
+  text-align: left;
+  position: relative;
+}
+
+.badge {
+  background: white;
+  color: black;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.badge-left {
+  background: white;
+  color: black;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.breadcrumb {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 1) 10%, rgba(255, 255, 255, 0) 80%);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.training-info,
+.reasons-section,
+.benefits-section,
+.training-materials {
+  text-align: left;
+  padding: 40px 20px;
+  background:rgb(252, 227, 255);
+}
+
+.reasons-container {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  max-width: 750px;
+  width: 100%;
+  text-align: center;
+}
+
+.reasons-section {
+  background: url('https://source.unsplash.com/1600x900/?business,marketing') no-repeat center center/cover;
+  color: rgb(0, 0, 0);
+  padding: 90px 20px;
+}
+
+.benefits-section {
+  background: url('https://source.unsplash.com/1600x900/?technology,digital') no-repeat center center/cover;
+  color: rgb(0, 0, 0);
+  padding: 60px 20px;
+}
+
+.training-info span,
+.reasons-section span,
+.benefits-section span,
+.training-materials span,
+.pricing-section span {
+  color: red;
+  /* font-weight: bold; */
+}
+
+.reasons-section h3,
+.benefits-section h3 {
+  text-align: center;
+  font-size: 28px;
+  /* font-weight: bold; */
+  color: #000000;
+  margin-bottom: 20px;
+}
+.btn-register {
+  background: red;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.btn-register:hover {
+  background: rgb(253, 191, 191);
+  color:red
+}
+
+.reasons-section .highlight,
+.benefits-section .highlight {
+  color: red;
+}
+
+.benefits-section .description {
+  text-align: center;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.reasons-section li,
+.benefits-section li,
+.training-materials li {
+  font-size: 18px;
+  margin-bottom: 12px;
+  text-align: left;
+}
+
+.pricing-section .discount-price {
+  color: green;
+  font-size: 24px;
+}
+
+.pricing-section .final-price {
+  color: red;
+  font-size: 36px;
+}
+
+.registration-section {
+  background: #f8f8f8;
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.form-wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 40px;
+  justify-content: space-between;
+}
+
+.form-container {
+  flex: 1;
+  text-align: left;
+  padding-right: 40px;
+  max-width: 600px;
+}
+
+h5 {
+  text-align: left;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.btn-submit {
+  background: #a88beb;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+}
+
+.form-image {
+  width: 40%;
+  height: auto;
+  flex-shrink: 0;
+}
+
+
+.bg-light-purple {
+  background-color: #e1cdf6;
+}
+
+.training-info {
+  max-width: 700px;
+  margin: auto;
+}
+
+.bnsp-logo {
+  max-width: 250px; /* Ukuran gambar lebih kecil */
+  height: auto;
+}
+body {
+  padding-top: 80px; /* Sesuaikan dengan tinggi navbar */
+}
+
+.checklist {
+  list-style: none;
+  text-align: left;
+  display: inline-block;
+}
+
+.checklist li {
+  font-size: 18px;
+  margin: 9px 0;
+  font-weight: 300;
+  color: #4c4b4d;
+}
+
+.checklist li::before {
+  content: "✔";
+  color: purple;
+  font-size: 20px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+/*register*/
+
+.register-container {
+  max-width: 200px;
+  margin: auto;
+  padding: 4px;
+  background: #F8F9FA;
+}
+
+.register-row{
+  max-width: 100px;
+  padding: 10px;
+  align-items: justify;
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.logo {
+  width: 100px;
+}
+
+.title {
+  font-weight: bold;
+}
+
+.custom-green {
+  background-color: #D1E7DD; /* Warna hijau Bootstrap */
+  color: white;
+}
+
+
+.custom-yellow {
+  font-size: 1rem;
+  background-color: #FFF3CD;
+}
+
+.form-card {
+  border-radius: 14px;
+  width: 30px;
+  display: flex;
+}
+
+
+.form-section-title {
+  font-weight: bold;
+}
+
+.custom-green-btn {
+  background-color: #D1E7DD !important;
+  border-color: #D1E7DD !important;
+  color: #000 !important;
+}
+
+.img-fluid{
+  max-width: 100%;
+  height: auto;
+}
+
+

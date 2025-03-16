@@ -7,10 +7,8 @@ const VisiComponent = () => {
         <div className="p-4 rounded-1 bg-visi">
           <img className="logo-visi" src="https://campusdigital.id/assets/images/icon/dart.png" alt="icon" />
         </div>
-        <div className="card-body">
           <h1>Visi</h1>
           <p>Menjadi perusahaan yang unggul dan terpercaya dalam pelayanan jasa Pendidikan dan Pelatihan di bidang Teknologi Digital dan Bisnis</p>
-        </div>
       </div>
     </div>
   );

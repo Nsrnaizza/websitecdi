@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
 import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap";
 import logo from "../assets/img/image.png";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom"; // Pastikan hanya pakai useNavigate
 
 const NavbarComponent = () => {
   const [changeColor, setChangeColor] = useState(false);
+  const navigate = useNavigate(); // Inisialisasi navigate
 
   const changeBackgroundColor = () => {
     setChangeColor(window.scrollY > 10);
@@ -69,10 +70,23 @@ const NavbarComponent = () => {
             </NavDropdown>
           </Nav>
 
+          {/* Tombol Masuk & Daftar */}
           <div className="d-flex text-center">
-            <button className="btn me-2" style={{ borderColor: "#dcc8f4", color: "#330369" }}>Masuk</button>
-            <button className="btn" style={{ backgroundColor: "#dcc8f4", borderColor: "#dcc8f4", color: "#330369" }}>Daftar</button>
-</div>
+            <button 
+              className="btn me-2" 
+              style={{ borderColor: "#dcc8f4", color: "#330369" }} 
+              onClick={() => navigate("/login")}
+            >
+              Masuk
+            </button>
+            <button 
+              className="btn" 
+              style={{ backgroundColor: "#dcc8f4", borderColor: "#dcc8f4", color: "#330369" }} 
+              onClick={() => navigate("/register")}
+            >
+              Daftar
+            </button>
+          </div>
 
         </Navbar.Collapse>
       </Container>
