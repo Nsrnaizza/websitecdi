@@ -1,14 +1,10 @@
-import FasilitasComponent from "../../components/FasilitasComponent";
-import KeunggulanComponent from "../../components/KeunggulanComponent";
+import FasilitasKeunggulanComponent from "../../components/FasilitasKeunggulanComponent";
 
 const FasilitasKeunggulanPage = () => {
   return (
-      <div className="section_fasilitas mb-5">
-        <div className="row justify-content-center">
-          <FasilitasComponent />
-          <KeunggulanComponent />
-        </div>
-      </div>
+    <div>
+      <FasilitasKeunggulanComponent />
+    </div>
   );
 };
 

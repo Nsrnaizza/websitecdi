@@ -2,7 +2,7 @@ import FotografiComponent from "../../components/Reguler/FotografiComponent";
 
 const FotografiPage = () => {
   return (
-    <div>
+    <div className='padding-30'>
       <FotografiComponent />
     </div>
   );

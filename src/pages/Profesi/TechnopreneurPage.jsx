@@ -2,7 +2,7 @@ import TechnopreneurComponent from "../../components/Profesi/TechnopreneurCompon
 
 const TechnopreneurPage = () => {
   return (
-    <div>
+    <div className='padding-30'>
       <TechnopreneurComponent />
     </div>
   );

@@ -2,7 +2,7 @@ import GraphicComponent from "../../components/Reguler/GraphicComponent";
 
 const GraphicDesignPage = () => {
   return (
-    <div>
+    <div className='padding-30'>
       <GraphicComponent />
     </div>
   );

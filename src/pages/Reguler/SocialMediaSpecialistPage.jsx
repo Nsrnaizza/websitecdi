@@ -2,7 +2,7 @@ import SocialMediaComponent from "../../components/Reguler/SocialMediaComponent"
 
 const SocialMediaSpecialistPage = () => {
   return (
-    <div>
+    <div className='padding-30'>
       <SocialMediaComponent />
     </div>
   );

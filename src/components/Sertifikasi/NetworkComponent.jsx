@@ -1,6 +1,7 @@
 import "../../dist/css/main.css";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 const NetworkComponent = () => {
   const navigate = useNavigate();
@@ -43,45 +44,99 @@ const NetworkComponent = () => {
         </div>
       </div>
       {/* Pelatihan Info */}
-      <div className="container training-info bg-light-puple text-center p-4 rounded shadow mt-5">
-        <h2>
-          Pelatihan Cepat <span>7 Hari Langsung Ujian</span>
-        </h2>
-        <h3>
-          Sertifikasi <b>Network, Infrastruktur, IOT and Service</b> BNSP
-        </h3>
-        <img className="bnsp-logo" src="https://campusdigital.id/assets/images/bnsp/logo_bnsp.png" alt="BNSP-LOGO" />
-        <p>Program pembelajaran online via Zoom atau offline tatap muka untuk Anda yang membutuhkan sertifikat BNSP di bidang Network, Infrastruktur, IOT and Service.</p>
-        <a href="#form-registration" className="btn-register">
-          DAFTAR SEKARANG
-        </a>
-      </div>
+<section className="py-5 bg-light">
+        <div className="container ">
+          <motion.div 
+            className="card border-0 shadow-sm p-4 p-md-5 text-center "
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+          >
+            <div className="row justify-content-center ">
+              <div className="col-md-8">
+                <h2 className="fw-bold mb-3">
+                  Pelatihan Cepat <span className="text-danger">7 Hari Langsung Ujian</span>
+                </h2>
+                <h3 className="mb-4">
+                  Sertifikasi <span className="fw-bold text-">Network, Infrastructure, IOT And Services</span> BNSP
+                </h3>
+                <img 
+                  src="https://campusdigital.id/assets/images/bnsp/logo_bnsp.png" 
+                  alt="BNSP-LOGO" 
+                  className="img-fluid mb-4"
+                  style={{ maxHeight: '100px' }}
+                />
+                <p className="lead mb-4" style={{ fontSize: '1rem' }}>
+                Progam Pembelajaran Online Via Zoom Meet atau Offline Tatap Muka Untuk Anda Yang Membutuhkan Sertifikat BNSP di Bidang  Network, Infrastructure, IOT And Services
+                </p>
+                <motion.a 
+                  href="#form-registration" 
+                  className="btn btn-danger btn-lg px-4 py-2"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  DAFTAR SEKARANG
+                </motion.a>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
       {/* Manfaat Digital Marketing */}
-      <div className="benefits-section">
-        <h3>
-          Manfaat Pelatihan <span>Network, Infrastruktur, IOT and Service</span>
-        </h3>
-        <ul>
-          <li>
-            Skema Sertifikasi:
-          </li>
-          <li>1. Network Administrator Muda</li>
-          <li>2. Network Administrator Madya</li>
-          <li>3. Network Administator Utama</li>
-          <li>4. Junior Technical Support</li>
-          <li>5. Staff Operasi IT</li>
-          <li>6. Ahli Cloud Computing</li>
-          <li>7. System Integrator</li>
-          <li>8. Network Security Analyst</li>
-          <li>9. Digital Computer Technology Scientist</li>
-          <li>10. Network Security Auditor</li>
-          <li>11. Staff Operasi IT</li>
-          <li>12.Teknisi Telepon Seluler Reparasi Perangkat Lunak Reakaya</li>
-          <li>13.Teknisi Telepon Seluler Reparasi Perangkat Keras </li>
-          <li>14. Clear OS Specialyst*</li>
-          <li>15.Cisco and Microtik Sertification*</li>
-        </ul>
+      <section className="py-5">
+  <div className="container">
+    <div className="row justify-content-center">
+      <div className="col-lg-8 text-center mb-2">
+        <h2 className="fw-bold mb-4 fs-7">
+          Manfaat Pelatihan<span className="text-danger fs-7"> Network, Infrastruktur, IOT and Service</span>
+        </h2>
+        <p className="">
+          Skema Sertifikasi:
+        </p>
       </div>
+    </div>
+    
+    <div className="row g-3">
+      {[
+        "Network Administrator Muda",
+        "Network Administrator Madya",
+        "Network Administator Utama",
+        "Junior Technical Support",
+        "Staff Operasi IT",
+        "Ahli Cloud Computing",
+        "System Integrator",
+        "Network Security Analyst",
+        "Digital Computer Technology Scientist",
+        "Network Security Auditor",
+        "Staff Operasi IT",
+        "Teknisi Telepon Seluler Reparasi Perangkat Lunak Reakaya",
+        "Teknisi Telepon Seluler Reparasi Perangkat Keras",
+        "Clear OS Specialyst*",
+        "Cisco and Microtik Sertification"
+      ].map((item, index) => (
+        <div className="col-md-6 col-lg-4" key={index}>
+          <motion.div 
+            className="card border-0 shadow-sm h-100"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: index * 0.1, duration: 0.5 }}
+            viewport={{ once: true }}
+          >
+            <div className="p-3">
+              <div className="d-flex align-items-start">
+                <div className="bg-primary bg-opacity-10 p-1 rounded me-2">
+                  <i className="bi bi-check-circle-fill text-primary small"></i>
+                </div>
+                <p className="mb-0 small">{item}</p>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
       
       {/* Form Pendaftaran */}
       <div className="registration-section">

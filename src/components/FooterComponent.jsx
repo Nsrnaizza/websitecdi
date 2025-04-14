@@ -1,12 +1,13 @@
 import { Container, Row, Col } from "react-bootstrap";
 import { FaMapMarkerAlt, FaEnvelope, FaWhatsapp, FaInstagram, FaFacebook, FaYoutube } from "react-icons/fa";
 import logo from "../assets/img/logo.png"; 
+import { OverlayTrigger, Tooltip } from "react-bootstrap";
 
 const FooterComponent = () => {
   return (
     <footer className="footer mt-5 custom-footer text-white">
       <Container className="text-center py-4">
-        {/* Logo dan Alamat */}
+        {/* Logo */}
         <Row>
           <Col>
             <img src={logo} alt="Campus Digital" className="footer-logo mb-3" />
@@ -14,17 +15,32 @@ const FooterComponent = () => {
         </Row>
 
         {/* Informasi Kontak */}
-        <Row className="contact-info mt-2">
+        <Row className="contact-info">
           <Col>
             <p className="text-white">
               <FaMapMarkerAlt className="me-2" /> Jl. Taman Sari Hill Residen, Blok B01, No.10, Kel. Mangunharjo, Kec. Tembalang, Kota Semarang
             </p>
-            <p className="text-white">
-              <FaEnvelope className="me-2" /> info@campusdigital.id
-            </p>
-            <p className="text-white">
-              <FaWhatsapp className="me-2" /> 62816343742
-            </p>
+            <p className="text-white d-flex justify-content-center align-items-center gap-3">
+  {/* Tooltip untuk Email */}
+  <OverlayTrigger
+    placement="top"
+    overlay={<Tooltip id="tooltip-email">Email</Tooltip>}
+  >
+    <span className="d-flex align-items-center">
+      <FaEnvelope className="email-icon me-2" /> info@campusdigital.id
+    </span>
+  </OverlayTrigger>
+
+  {/* Tooltip untuk WhatsApp */}
+  <OverlayTrigger
+    placement="top"
+    overlay={<Tooltip id="tooltip-wa">WhatsApp</Tooltip>}
+  >
+    <span className="d-flex align-items-center">
+      <FaWhatsapp className="whatsapp-icon" /> 62816343742
+    </span>
+  </OverlayTrigger>
+</p>
           </Col>
         </Row>
 

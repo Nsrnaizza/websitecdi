@@ -2,7 +2,7 @@ import UMKMGoDigitalComponent from "../../components/Corporate/UMKMGoDigitalComp
 
 const UMKMGoDigitalPage = () => {
   return (
-    <div>
+    <div className='padding-30'>
       <UMKMGoDigitalComponent />
     </div>
   );

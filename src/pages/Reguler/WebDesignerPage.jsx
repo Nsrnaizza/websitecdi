@@ -2,7 +2,7 @@ import DesignerComponent from "../../components/Reguler/DesignerComponent";
 
 const WebDesignerPage = () => {
   return (
-    <div>
+    <div className='padding-30'>
       <DesignerComponent />
     </div>
   );

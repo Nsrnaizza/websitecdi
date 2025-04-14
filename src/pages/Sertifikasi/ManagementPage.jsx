@@ -2,7 +2,7 @@ import ManagementComponent from "../../components/Sertifikasi/ManagementComponen
 
 const ManagementPage = () => {
   return (
-    <div>
+    <div className='padding-30'>
       <ManagementComponent />
     </div>
   );

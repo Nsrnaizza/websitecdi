@@ -2,7 +2,7 @@ import SejarahComponent from "../../components/SejarahComponent";
 
 const SejarahPage = () => {
   return (
-    <div>
+    <div className='padding-30'>
       <SejarahComponent />
     </div>
   );

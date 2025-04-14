@@ -1,6 +1,8 @@
 import "../../dist/css/main.css";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import { motion } from "framer-motion";
+
 
 const DigitalMarketerComponent = () => {
   const navigate = useNavigate();
@@ -41,145 +43,262 @@ const DigitalMarketerComponent = () => {
         </div>
       </div>
       {/* Pelatihan Info */}
-      <div className="container training-info bg-light-puple text-center p-4 rounded shadow mt-5">
-        <h2>
-          Pelatihan Cepat <span>7 Hari Langsung Ujian</span>
-        </h2>
-        <h3>
-          Sertifikasi <b>Digital Marketer</b> BNSP
-        </h3>
-        <img className="bnsp-logo" src="https://campusdigital.id/assets/images/bnsp/logo_bnsp.png" alt="BNSP-LOGO" />
-        <p>Program pembelajaran online via Zoom atau offline tatap muka untuk Anda yang membutuhkan sertifikat BNSP di bidang Digital Marketer.</p>
-        <a href="#form-registration" className="btn-register">
-          DAFTAR SEKARANG
-        </a>
-      </div>
+      <section className="py-5 bg-light">
+             <div className="container">
+               <motion.div 
+                 className="card border-0 shadow-sm p-4 p-md-5 text-center"
+                 initial={{ opacity: 0, y: 30 }}
+                 whileInView={{ opacity: 1, y: 0 }}
+                 transition={{ duration: 0.5 }}
+                 viewport={{ once: true }}
+               >
+                 <div className="row justify-content-center">
+                   <div className="col-md-8">
+                     <h2 className="fw-bold mb-3">
+                       Pelatihan Cepat <span className="text-danger">7 Hari Langsung Ujian</span>
+                     </h2>
+                     <h3 className="mb-4">
+                       Sertifikasi <span className="fw-bold text-danger">Digital Marketer</span> BNSP
+                     </h3>
+                     <img 
+                       src="https://campusdigital.id/assets/images/bnsp/logo_bnsp.png" 
+                       alt="BNSP-LOGO" 
+                       className="img-fluid mb-4"
+                       style={{ maxHeight: '100px' }}
+                     />
+                     <p className="lead mb-4" style={{ fontSize: '1rem' }}>
+                     Progam Pembelajaran Online Via Zoom Meet atau Offline Tatap Muka Untuk Anda Yang Membutuhkan Sertifikat BNSP di Bidang Digital Marketer.
+                     </p>
+                     <motion.a 
+                       href="#form-registration" 
+                       className="btn btn-danger btn-lg px-4 py-2"
+                       whileHover={{ scale: 1.05 }}
+                       whileTap={{ scale: 0.95 }}
+                     >
+                       DAFTAR SEKARANG
+                     </motion.a>
+                   </div>
+                 </div>
+               </motion.div>
+             </div>
+           </section>
       {/* Mengapa? */}
-      <div className="raeseon-container">
-        <div className="reasons-section">
-          <h3>
-            Mengapa Harus Menguasai <span className="highlight">Digital Marketer?</span>
-          </h3>
-          <p>
-          Mendalami tentang digital marketing
-          </p>
-          <ul className="checklist">
-            <li>Menyesuaikan diri dengan perubahan industry</li>
-            <li>Meningkatkan Keterampilan dan kompetensi</li>
-            <li>Memperluas jaringan dan kesempatan kolaborasi</li>
-          </ul>
-        </div>
-      </div>
+       <section className="py-5">
+                   <div className="container">
+                     <div className="row justify-content-center">
+                       <div className="col-lg-8 text-center mb-5">
+                         <h2 className="fw-bold mb-3">
+                           Mengapa Harus Menguasai <span className="text-danger">Digital Marketer?</span>
+                         </h2>
+                         <p className="lead text-muted">
+                         Mendalami tentang digital marketing
+
+                         </p>
+                       </div>
+                     </div>
+                     
+                     <div className="row g-4">
+                       {[
+                         "Menyesuaikan diri dengan perubahan industry",
+                         "Meningkatkan Keterampilan dan kompetensi",
+                         "Memperluas jaringan dan kesempatan kolaborasi"
+                       ].map((item, index) => (
+                         <div className="col-md-6 col-lg-4" key={index}>
+                           <motion.div 
+                             className="card border-0 shadow-sm h-100"
+                             initial={{ opacity: 0, y: 30 }}
+                             whileInView={{ opacity: 1, y: 0 }}
+                             transition={{ delay: index * 0.1, duration: 0.5 }}
+                             viewport={{ once: true }}
+                           >
+                             <div className=" p-4">
+                               <div className="d-flex align-items-start">
+                                 <div className="bg-primary bg-opacity-10 p-2 rounded me-3">
+                                   <i className="bi bi-check-circle-fill text-primary"></i>
+                                 </div>
+                                 <p className="mb-0">{item}</p>
+                               </div>
+                             </div>
+                           </motion.div>
+                         </div>
+                       ))}
+                     </div>
+                   </div>
+                 </section>
+      
       {/* Manfaat */}
-      <div className="benefits-section">
-        <h3>
-          Manfaat Pelatihan <span className="highlight">Digital Marketer</span>
-        </h3>
-        <p>
-        Program pendidikan dan pelatihan selama satu tahun setara D1 pemasaran digital. Anda akan belajar bagaimana merencanakan strategi penjualan hingga melakukan penjualan secara daring dengan garansi selesai program Anda langsung di terima kerja sebagai professional di Industri swasta nasional maupun multi nasional.
-        </p>
-        <ul className="checklist">
-          <li>memberikan pemahaman yang komperehensif.</li>
-          <li>Memberikan kesempatan untuk mengembangkan keterampilan.</li>
-        </ul>
-      </div>
-      {/* Materi Pelatihan */}
-      <section className="materi-pelatihan">
+      <section className="py-5 bg-light">
         <div className="container">
-          <div className="row m-md-3 m-sm-3">
-            <div className="card title">
-              <h3 className="mb-4 mt-3 text-center">
-                Materi Pelatihan <span style={{ color: "red" }}>Uji Kompetensi Teknologi Digital</span>
-              </h3>
-              <div className="row p-lg-4 p-md-2 p-sm-1">
-                {[
-                  {
-                    title: "Customer Service Online",
-                    content: "Mendukung Tugas Tugas Administratif Dan Operasional Lingkungan Kantor",
-                  },
-                  {
-                    title: "Account Staff",
-                    content: "Memasarkan Produk Menggunakan Platform Online",
-                  },
-                  {
-                    title: "Digital Marketing Staff",
-                    content: "Menciptakan Visual Yang Menarik Dan Komunikatif",
-                  },
-                  {
-                    title: "Digital Marketing Manager",
-                    content: "Menciptakan Tampilan Visual Dan Struktur Web",
-                  },
-                  {
-                    title: "Social Media Specialist",
-                    content: "Membangun Web Yang Berjalan Di Internet",
-                  },
-                  {
-                    title: "Social Media Manager",
-                    content: "Mengubah Video Agar Menjadi Konten Yang Menarik",
-                  },
-                  {
-                    title: "Marketplace Specialist",
-                    content: "Mengambil Gambar Dan Menyesuaikan Komposisi Visual",
-                  },
-                  {
-                    title: "Marketplace Manager",
-                    content: "Membuat Video, Animasi, Dll",
-                  },
-                  {
-                    title: "Web Designer",
-                    content: "Membuat Game, Pengujian Game, Dan Peluncuran Game",
-                  },
-                  {
-                    title: "Web Developer",
-                    content: "Mengelola Dan Mengoptimalkan Kehadiran Di Media Sosial",
-                  },
-                  {
-                    title: "Accounting",
-                    content: "Mengembangkan Aplikasi Untuk Digunakan Pada Perangkat Mobile",
-                  },
-                  {
-                    title: "Program Analyst",
-                    content: "Mengelola Dan Mengoptimalkan Kehadiran Di Media Sosial",
-                  },
-                  {
-                    title: "Office Operator",
-                    content: "Mengembangkan Aplikasi Untuk Digunakan Pada Perangkat Mobile",
-                  },
-                ].map((item, index) => (
-                  <div className="col-lg-4 col-sm-6" key={index}>
-                    <div className="card border-0 shadow-sm mb-4 size-manfaat">
-                      <div className="card-header d-flex justify-content-between" id={`heading${index}`}>
-                        <button className="btn btn-collapse" type="button" onClick={() => toggleCollapse(index)} aria-expanded={activeIndex === index} aria-controls={`collapse${index}`}>
-                          <span>{item.title}</span>
-                          <i className={`fa fa-angle-up ${activeIndex === index ? "rotate" : ""}`}></i>
-                        </button>
-                      </div>
-                      <div id={`collapse${index}`} className={`collapse ${activeIndex === index ? "show" : ""}`} aria-labelledby={`heading${index}`} data-bs-parent="#accordionExample">
-                      <div className="custom-content p-3 text-truncate-2 text-justify" style={{ fontSize: "13px", fontWeight:"normal"}}>
-                          {item.content.split("\n").map((paragraph, i) => (
-                            <p key={i}>{paragraph}</p>
-                          ))}
-                        </div>
-                      </div>
+          <div className="row justify-content-center">
+            <div className="col-lg-10">
+              <div className="text-center mb-5">
+                <h2 className="fw-bold mb-3">
+                  Manfaat Pelatihan <span className="text-danger">Digital Marketer</span>
+                </h2>
+                <p className="lead text-muted">
+                  Apa yang akan Anda dapatkan dari pelatihan ini
+                </p>
+              </div>
+              
+              <div className="row g-4">
+                <div className="col-lg-6">
+                  <div className="card border-0 h-100 shadow-sm">
+                    <div className=" p-4">
+                      <p className="mb-4">
+                      Program pendidikan dan pelatihan selama satu tahun setara D1 pemasaran digital. Anda akan belajar bagaimana merencanakan strategi penjualan hingga melakukan penjualan secara daring dengan garansi selesai program Anda langsung di terima kerja sebagai professional di Industri swasta nasional maupun multi nasional.
+                      </p>
                     </div>
                   </div>
-                ))}
+                </div>
+                
+                <div className="col-lg-6">
+                  <div className="card border-0 h-100 shadow-sm">
+                    <div className=" p-4">
+                      <h5 className="mb-3">Yang akan Anda pelajari:</h5>
+                      <ul className="list-unstyled">
+                        {[
+                          "Memberikan pemahaman yang komperehensif.",
+                          "Memberikan kesempatan untuk mengembangkan keterampilan."
+                        ].map((item, index) => (
+                          <li key={index} className="mb-2 d-flex align-items-start">
+                            <i className="bi bi-check-circle-fill text-primary me-2 mt-1"></i>
+                            <span>{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
+      {/* Materi Pelatihan */}
+ <section className="py-5">
+  <div className="container">
+    <div className="text-center mb-5">
+      <h2 className="fw-bold mb-3">
+        Materi Pelatihan <span className="text-danger">Uji Kompetensi Teknologi Digital</span>
+      </h2>
+    </div>
+    
+    <div className="row g-4">
+                {[
+                  {
+                    title: "Customer Service Online",
+                    content: "Belajar Melayani Customer Melalui Platform Online",
+                  },
+                  {
+                    title: "Account Staff",
+                    content: "Mengelola Data Data Perusahaan, Mengelola Data Keuangan, Dan Tugas Lain Yang Berkaitan Dengan Akuntansi",
+                  },
+                  {
+                    title: "Digital Marketing Staff",
+                    content: "Merencanakan Dan Mengelola Pemasaran Digital Perusahaan",
+                  },
+                  {
+                    title: "Digital Marketing Manager",
+                    content: "Mengelola Strategi Digital Marketing Perusahaan",
+                  },
+                  {
+                    title: "Social Media Specialist",
+                    content: "Mengelola Kegiatan Marketing Melalui Platform Media Sosial",
+                  },
+                  {
+                    title: "Social Media Manager",
+                    content: "Mengelola Strategi Dan Pengembangan Perusahaan Di Platform Sosial Media",
+                  },
+            {
+                    title: "Marketplace Specialist",
+                    content: "Mengelola Dan Memaksimalkan Bisnis Di Marketplace",
+                  },
+                  {
+                    title: "Marketplace Manager",
+                    content: "Mengelola Strategi Dan Pengembangan Bisnis Di Marketplace",
+                  },
+                  {
+                    title: "Web Designer",
+                    content: " Membuat Desain Menjadi Menarik",
+                  },
+                  {
+                    title: "Web Developer",
+                    content: "Merancang Dan Mengembangkan Website",
+                  },
+                  {
+                    title: "Accounting",
+                    content: "Mengelola Keuangan, Pencatatan Transaksi, Analisis, Dan Pelaporan Informasi",
+                  },
+                  {
+                    title: "Program Analyst",
+                    content: "Mengelola Keuangan, Pencatatan Transaksi, Analisis, Dan Pelaporan Informasi Keuangan",
+                  },
+                  {
+                    title: "Office Operator",
+                    content: "Menganalisis Kebutuhan Bisnis, Mengembangkan Rencana, Dan Mengoordinasikan Implementasi System Informasi",
+                  },
+                ].map((item, index) => (
+                  <div className="col-md-6 col-lg-4" key={index}>
+                    <motion.div
+                      className="card border-0 shadow-sm h-100"
+                      initial={{ opacity: 0, y: 30 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ delay: index * 0.1, duration: 0.5 }}
+                      viewport={{ once: true }}
+                    >
+                      <div 
+                        className="card-header bg-white border-0 p-0"
+                        onClick={() => toggleCollapse(index)}
+                      >
+                        <button 
+                          className="btn w-100 text-start p-3 d-flex justify-content-between align-items-center"
+                          aria-expanded={activeIndex === index}
+                        >
+                          <span className="fw-medium">{item.title}</span>
+                          <i className={`bi ${activeIndex === index ? 'bi-chevron-up' : 'bi-chevron-down'}`}></i>
+                        </button>
+                      </div>
+                      <div className={`collapse ${activeIndex === index ? 'show' : ''}`}>
+                        <div className="p-3 pt-0">
+                          <p className="text-muted">{item.content}</p>
+                        </div>
+                      </div>
+                    </motion.div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
       {/* Biaya Investasi */}
-      <div className="pricing-section text-center">
-        <h2>
-          Berapa Biaya Investasi Pelatihan <span>Digital Marketer?</span>
-        </h2>
-        <h3 className="discount-price">
-          <s>16.000.000</s>
-        </h3>
-        <h1 className="final-price">15.000.000</h1>
-        <h3>Termasuk biaya sertifikasi BNSP</h3>
-      </div>
+      <section className="py-4 bg-light border-top border-bottom">
+  <div className="container text-center">
+    <h3 className="fw-bold mb-3">
+      Berapa Biaya Inevstasi Pelatihan <span className="text-danger">Digital Marketer?</span>
+    </h3>
+
+    <div className="d-flex justify-content-center align-items-baseline mb-2">
+      <h4 className="text-muted me-2">
+        <s>Rp 16.000.000</s>
+      </h4>
+      <span className="badge bg-success bg-opacity-10 text-success px-2 py-1 small">
+        Hemat Rp 1.000.000
+      </span>
+    </div>
+
+    <h2 className="fw-bold mb-3 text-danger">Rp 15.000.000</h2>
+
+    <p className="mb-3 small text-muted">Termasuk biaya sertifikasi BNSP</p>
+
+    <motion.a 
+      href="#form-registration" 
+      className="btn btn-danger btn-sm px-4 py-2"
+      whileHover={{ scale: 1.03 }}
+      whileTap={{ scale: 0.97 }}
+    >
+      Daftar Sekarang
+    </motion.a>
+  </div>
+</section>
       {/* Form Pendaftaran */}
       <div className="registration-section">
         <h5>Form Pendaftaran</h5>

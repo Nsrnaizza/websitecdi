@@ -2,7 +2,7 @@ import KompetensiDigitalMarketingComponent from "../../components/Corporate/Komp
 
 const KompetensiDigitalMarketingPage = () => {
   return (
-    <div>
+    <div className='padding-30'>
       <KompetensiDigitalMarketingComponent />
     </div>
   );

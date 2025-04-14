@@ -2,7 +2,7 @@ import TrainingForTrainerComponent from "../../components/Corporate/TrainingForT
 
 const TrainingForTrainerPage = () => {
   return (
-    <div>
+    <div className='padding-30'>
       <TrainingForTrainerComponent />
     </div>
   );

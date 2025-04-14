@@ -2,7 +2,7 @@ import SoftwareComponent from "../../components/Sertifikasi/SoftwareComponent";
 
 const SoftwarePage = ()=>{
     return(
-        <div>
+        <div className='padding-30'>
             <SoftwareComponent/>
         </div>
     );

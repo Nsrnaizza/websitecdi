@@ -2,7 +2,7 @@ import KelasIndustriComponent from "../../components/Corporate/KelasIndustriComp
 
 const KelasIndustriPage = () => {
   return (
-    <div>
+    <div className='padding-30'>
       <KelasIndustriComponent />
     </div>
   );

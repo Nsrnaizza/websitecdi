@@ -1,6 +1,7 @@
 import "../../dist/css/main.css";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 const FiberComponent = () => {
   const navigate = useNavigate();
@@ -43,32 +44,71 @@ const FiberComponent = () => {
         </div>
       </div>
       {/* Pelatihan Info */}
-      <div className="container training-info bg-light-puple text-center p-4 rounded shadow mt-5">
-        <h2>
-          Pelatihan Cepat <span>7 Hari Langsung Ujian</span>
-        </h2>
-        <h3>
-          Sertifikasi <b>Fiber Optic</b> BNSP
-        </h3>
-        <img className="bnsp-logo" src="https://campusdigital.id/assets/images/bnsp/logo_bnsp.png" alt="BNSP-LOGO" />
-        <p>Program pembelajaran online via Zoom atau offline tatap muka untuk Anda yang membutuhkan sertifikat BNSP di bidang Fiber Optic</p>
-        <a href="#form-registration" className="btn-register">
-          DAFTAR SEKARANG
-        </a>
-      </div>
-      {/* {Mengapa Harus menguasai  fiber optic} */}
-      <div className="benefits-section">
-        <h3>
-          Mengapa Harus Menguasai <span>Fiber Optic?</span>
-        </h3>
-      </div>
+      <section className="py-5 bg-light">
+        <div className="container ">
+          <motion.div 
+            className="card border-0 shadow-sm p-4 p-md-5 text-center "
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+          >
+            <div className="row justify-content-center ">
+              <div className="col-md-8">
+                <h2 className="fw-bold mb-3">
+                  Pelatihan Cepat <span className="text-danger">7 Hari Langsung Ujian</span>
+                </h2>
+                <h3 className="mb-4">
+                  Sertifikasi <span className="fw-bold text-">Fiber Optic</span> BNSP
+                </h3>
+                <img 
+                  src="https://campusdigital.id/assets/images/bnsp/logo_bnsp.png" 
+                  alt="BNSP-LOGO" 
+                  className="img-fluid mb-4"
+                  style={{ maxHeight: '100px' }}
+                />
+                <p className="lead mb-4" style={{ fontSize: '1rem' }}>
+                Progam Pembelajaran Online Via Zoom Meet atau Offline Tatap Muka Untuk Anda Yang Membutuhkan Sertifikat BNSP di Bidang Fiber Optic
+                </p>
+                <motion.a 
+                  href="#form-registration" 
+                  className="btn btn-danger btn-lg px-4 py-2"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  DAFTAR SEKARANG
+                </motion.a>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
 
-      {/* Manfaat Digital Marketing */}
-      <div className="benefits-section">
-        <h3>
-          Manfaat Pelatihan <span>Fiber Optic</span>
-        </h3>
+      <section className="py-5">
+  <div className="container">
+    <div className="row justify-content-center">
+      <div className="col-lg-8 text-center mb-2">
+        <h2 className="fw- mb-4 fs-4">
+        Mengapa Harus Menguasai<span className="text-danger fs-4"> Fiber Optic?</span>
+        </h2>
       </div>
+    </div>
+    </div>
+    </section>
+
+      {/* {Mengapa Harus menguasai  fiber optic} */}
+      <section className="py-5">
+  <div className="container">
+    <div className="row justify-content-center">
+      <div className="col-lg-8 text-center mb-2">
+        <h2 className="fw mb-4 fs-4">
+          Manfaat Pelatihan<span className="text-danger fs-4"> Fiber Optic</span>
+        </h2>
+      </div>
+    </div>
+
+  </div>
+</section>
       
       {/* Form Pendaftaran */}
       <div className="registration-section">

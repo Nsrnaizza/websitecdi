@@ -3,7 +3,7 @@ import RegisterComponent from "../components/RegisterComponent";
 
 const RegisterPage =()=>{
     return(
-        <div>
+        <div className='padding-30'>
             <RegisterComponent/>
         </div>
     );

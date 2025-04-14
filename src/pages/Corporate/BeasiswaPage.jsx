@@ -2,7 +2,7 @@ import BeasiswaComponent from "../../components/Corporate/BeasiswaComponent";
 
 const BeasiswaPage = () => {
   return (
-    <div>
+    <div className='padding-30'>
       <BeasiswaComponent />
     </div>
   );

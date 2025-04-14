@@ -1,6 +1,7 @@
 import "../../dist/css/main.css";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 const FotografiComponent = () => {
   const navigate = useNavigate();
@@ -14,6 +15,17 @@ const FotografiComponent = () => {
   const toggleCollapse = (index) => {
     setActiveIndex(activeIndex === index ? null : index);
   };
+
+  const trainingMaterials = [
+    { title: "Dasar Fotografi", content: "Memahami Dasar Yang Diperlukan Dalam Fotografi." },
+    { title: "Dasar Kamera", content: "Jenis Kamera, Sensor, Lensa, Mode, Dll." },
+    { title: "Set-Up Studio", content: "Memahami Cara Melakukan Set-Up Studio." },
+    { title: "Praktek Foto", content: "Mengimplementasikan Dasar Dasar Fotografi." },
+    { title: "Editing Foto", content: "Mempelajari Tools Tools Yang Digunakan Dalam Pengeditan Foto." },
+    { title: "Membuat Konten Foto", content: "Menentukan Tema, Pemilihan Lokasi, Pengaturan Pencahayaan, Komposisi, Dll." },
+    { title: "Membuat DIY", content: "Membuat Studio, Reflector, Filter Effect, Background, Dll." },
+    { title: "Property Pendukung", content: "Property Property Yang Dibutuhkan Dalam Fotografi." },
+  ];
 
   return (
     <div className="page-program">
@@ -40,152 +52,217 @@ const FotografiComponent = () => {
           </nav>
         </div>
       </div>
-      {/* Pelatihan Info */}
-      <div className="container training-info bg-light-puple text-center p-4 rounded shadow mt-5">
-        <h2>
-          Pelatihan Cepat <span>7 Hari Langsung Ujian</span>
-        </h2>
-        <h3>
-          Sertifikasi <b>Fotografi</b> BNSP
-        </h3>
-        <img className="bnsp-logo" src="https://campusdigital.id/assets/images/bnsp/logo_bnsp.png" alt="BNSP-LOGO" />
-        <p>Program pembelajaran online via Zoom atau offline tatap muka untuk Anda yang membutuhkan sertifikat BNSP di bidang Fotografi.</p>
-        <a href="#form-registration" className="btn-register">
-          DAFTAR SEKARANG
-        </a>
-      </div>
-      {/* Mengapa? */}
-      <div className="raeseon-container">
-        <div className="reasons-section">
-          <h3>
-            Mengapa Harus Menguasai <span className="highlight">Fotografi?</span>
-          </h3>
-          <ul className="checklist">
-            <li>Mengungkapkan kreativitas dan menghasilkan karya yang unik</li>
-            <li>Memotret momen - momen berharga</li>
-          </ul>
-        </div>
-      </div>
-      {/* Manfaat */}
-      <div className="benefits-section">
-        <h3>
-          Manfaat Pelatihan <span className="highlight">Fotografi</span>
-        </h3>
 
-        <p className="description">
-          Pelatihan fotografi memberikan kesempatan untuk mengembangkan keterampilan teknis dan kreatif Anda, memperluas pengetahuan industri, dan membuka peluang karir dalam fotografi. Hal ini memungkinkan Anda untuk mengekspresikan diri
-          secara visual, menangkap momen yang berharga, dan menciptakan gambar yang memikat dan bermakna.
-        </p>
-        <ul className="checklist">
-          <li> Mengembangkan kemampuan untuk melihat dunia dengan mata terhadap keindahan sekitar</li>
-          <li> Memahami aspek yang dibutuhkan dalam fotografi</li>
-        </ul>
-      </div>
-      {/* Materi Pelatihan */}
-      <section className="materi-pelatihan">
+      {/* Training Info */}
+      <section className="py-5 bg-light">
         <div className="container">
-          <div className="row m-md-3 m-sm-3">
-            <div className="card title">
-              <h3 className="mb-4 mt-3 text-center">
-                Materi Pelatihan <span style={{ color: "red" }}>Fotografi</span>
-              </h3>
-              <div className="row p-lg-4 p-md-2 p-sm-1">
-                {[
-                  {
-                    title: "Dasar Fotografi",
-                    content: "Memahami Dasar Yang Diperlukan Dalam Fotografi.",
-                  },
-                  {
-                    title: "Dasar Kamera",
-                    content: "Jenis Kamera, Sensor, Lensa, Mode, Dll.",
-                  },
-                  {
-                    title: "Set-Up Studio",
-                    content: "Memahami Cara Melakukan Set-Up Studio.",
-                  },
-                  {
-                    title: "Praktek Foto",
-                    content: "Mengimplementasikan Dasar Dasar Fotografi.",
-                  },
-                  {
-                    title: "Editing Foto",
-                    content: "Mempelajari Tools Tools Yang Digunakan Dalam Pengeditan Foto.",
-                  },
-                  {
-                    title: "Membuat Konten Foto",
-                    content: "Menentukan Tema, Pemilihan Lokasi, Pengaturan Pencahayaan, Komposisi, Dll.",
-                  },
-                  {
-                    title: "Membuat DIY",
-                    content: "Membuat Studio, Reflector, Filter Effect, Background, Dll.",
-                  },
-                  {
-                    title: "Property Pendukung",
-                    content: "Property Property Yang Dibutuhkan Dalam Fotografi.",
-                  },
-                ].map((item, index) => (
-                  <div className="col-lg-4 col-sm-6" key={index}>
-                    <div className="card border-0 shadow-sm mb-4 size-manfaat">
-                      <div className="card-header d-flex justify-content-between" id={`heading${index}`}>
-                        <button className="btn btn-collapse" type="button" onClick={() => toggleCollapse(index)} aria-expanded={activeIndex === index} aria-controls={`collapse${index}`}>
-                          <span>{item.title}</span>
-                          <i className={`fa fa-angle-up ${activeIndex === index ? "rotate" : ""}`}></i>
-                        </button>
+          <motion.div className="card border-0 shadow-sm p-4 p-md-5 text-center" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
+            <div className="row justify-content-center">
+              <div className="col-md-8">
+                <h2 className="fw-bold mb-3">
+                  Pelatihan Cepat <span className="text-danger">7 Hari Langsung Ujian</span>
+                </h2>
+                <h3 className="mb-4">
+                  Sertifikasi <span className="fw-bold text-danger">Fotografi</span> BNSP
+                </h3>
+                <img src="https://campusdigital.id/assets/images/bnsp/logo_bnsp.png" alt="BNSP-LOGO" className="img-fluid mb-4" style={{ maxHeight: "100px" }} />
+                <p className="lead mb-4">Program pembelajaran online via Zoom atau offline tatap muka untuk Anda yang membutuhkan sertifikat BNSP di bidang Fotografi.</p>
+                <motion.a href="#form-registration" className="btn btn-danger btn-lg px-4 py-2" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                  DAFTAR SEKARANG
+                </motion.a>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Why Section */}
+      <section className="py-5">
+        <div className="container">
+          <div className="row justify-content-center">
+            <div className="col-lg-8 text-center mb-5">
+              <h2 className="fw-bold mb-3">
+                Mengapa Harus Menguasai <span className="text-danger">Fotografi?</span>
+              </h2>
+              <p className="lead text-muted">Keahlian yang sangat dibutuhkan di era digital saat ini</p>
+            </div>
+          </div>
+
+          <div className="row g-4">
+            {["Mengungkapkan kreativitas dan menghasilkan karya yang unik", "Memotret momen - momen berharga"].map((item, index) => (
+              <div className="col-md-6 col-lg-4" key={index}>
+                <motion.div className="card border-0 shadow-sm h-100" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.1, duration: 0.5 }} viewport={{ once: true }}>
+                  <div className="p-4">
+                    <div className="d-flex align-items-start">
+                      <div className="bg-primary bg-opacity-10 p-2 rounded me-3">
+                        <i className="bi bi-check-circle-fill text-primary"></i>
                       </div>
-                      <div id={`collapse${index}`} className={`collapse ${activeIndex === index ? "show" : ""}`} aria-labelledby={`heading${index}`} data-bs-parent="#accordionExample">
-                      <div className="custom-content p-3 text-truncate-2 text-justify" style={{ fontSize: "13px", fontWeight:"normal"}}>
-                          {item.content.split("\n").map((paragraph, i) => (
-                            <p key={i}>{paragraph}</p>
-                          ))}
-                        </div>
-                      </div>
+                      <p className="mb-0">{item}</p>
                     </div>
                   </div>
-                ))}
+                </motion.div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-5 bg-light">
+        <div className="container">
+          <div className="row justify-content-center">
+            <div className="col-lg-10">
+              <div className="text-center mb-5">
+                <h2 className="fw-bold mb-3">
+                  Manfaat Pelatihan <span className="text-danger">Fotografi</span>
+                </h2>
+                <p className="lead text-muted">Apa yang akan Anda dapatkan dari pelatihan ini</p>
+              </div>
+
+              <div className="row g-4">
+                <div className="col-lg-6">
+                  <div className="card border-0 h-100 shadow-sm">
+                    <div className="p-4">
+                      <p className="mb-4">
+                        Pelatihan fotografi memberikan kesempatan untuk mengembangkan keterampilan teknis dan kreatif Anda, memperluas pengetahuan industri, dan membuka peluang karir dalam fotografi. Hal ini memungkinkan Anda untuk
+                        mengekspresikan diri secara visual, menangkap momen yang berharga, dan menciptakan gambar yang memikat dan bermakna.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="col-lg-6">
+                  <div className="card border-0 h-100 shadow-sm">
+                    <div className="p-4">
+                      <h5 className="mb-3">Yang akan Anda pelajari:</h5>
+                      <ul className="list-unstyled">
+                        {["Mengembangkan kemampuan untuk melihat dunia dengan mata terhadap keindahan sekitar", "Memahami aspek yang dibutuhkan dalam fotografi"].map((item, index) => (
+                          <li key={index} className="mb-2 d-flex align-items-start">
+                            <i className="bi bi-check-circle-fill text-primary me-2 mt-1"></i>
+                            <span>{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
-      {/* Biaya Investasi */}
-      <div className="pricing-section text-center">
-        <h2>
-          Berapa Biaya Investasi Pelatihan <span>Fotografi</span>
-        </h2>
-        <h3 className="discount-price">
-          <s></s>
-        </h3>
-        <h1 className="final-price"></h1>
-        <h3>Termasuk biaya sertifikasi BNSP</h3>
-      </div>
-      {/* Form Pendaftaran */}
-      <div className="registration-section">
-        <h5>Form Pendaftaran</h5>
-        <div className="form-wrapper">
-          <form id="form-registration" method="post" action="/" onSubmit={handleSubmit} className="form-container">
-            <div className="form-group">
-              <label htmlFor="nama_lengkap">Nama Lengkap</label>
-              <input type="text" id="nama_lengkap" name="nama_lengkap" placeholder="Nama Lengkap" className="form-input" required />
-            </div>
-            <div className="form-group">
-              <label htmlFor="nama_panggilan">Instansi</label>
-              <input type="text" id="nama_panggilan" name="nama_panggilan" placeholder="Instansi" className="form-input" required />
-            </div>
-            <div className="form-group">
-              <label htmlFor="email">Email</label>
-              <input type="email" id="email" name="email" placeholder="Email" className="form-input" required />
-            </div>
-            <div className="form-group">
-              <label htmlFor="nomor_hp">No HP / WhatsApp</label>
-              <input type="tel" id="nomor_hp" name="nomor_hp" placeholder="No HP / WhatsApp" className="form-input" required />
-            </div>
-            <button type="submit" className="btn-submit">
-              Daftar
-            </button>
-          </form>
-          <img src="https://campusdigital.id/assets/images/illustration/customer-service.svg" alt="Customer Service" className="form-image" />
+
+      {/* Training Materials */}
+      <section className="py-5">
+        <div className="container">
+          <div className="text-center mb-5">
+            <h2 className="fw-bold mb-3">
+              Materi Pelatihan <span className="text-danger">Fotografi</span>
+            </h2>
+            <p className="lead text-muted">Kurikulum lengkap untuk menjadi Fotografer profesional</p>
+          </div>
+
+          <div className="row g-4">
+            {trainingMaterials.map((item, index) => (
+              <div className="col-md-6 col-lg-4" key={index}>
+                <motion.div className="card border-0 shadow-sm h-100" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.1, duration: 0.5 }} viewport={{ once: true }}>
+                  <div className="card-header bg-white border-0 p-0" onClick={() => toggleCollapse(index)}>
+                    <button className="btn w-100 text-start p-3 d-flex justify-content-between align-items-center" aria-expanded={activeIndex === index}>
+                      <span className="fw-medium">{item.title}</span>
+                      <i className={`bi ${activeIndex === index ? "bi-chevron-up" : "bi-chevron-down"}`}></i>
+                    </button>
+                  </div>
+                  <div className={`collapse ${activeIndex === index ? "show" : ""}`}>
+                    <div className="pt-0">
+                      <p className="text-muted">{item.content}</p>
+                    </div>
+                  </div>
+                </motion.div>
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
+      </section>
+
+      {/* Pricing Section */}
+      <section className="py-4 bg-light border-top border-bottom">
+        <div className="container text-center">
+          <h3 className="fw-bold mb-3">
+            Biaya Pelatihan <span className="text-danger">Fotografi</span>
+          </h3>
+
+          <div className="d-flex justify-content-center align-items-baseline mb-2">
+            <h4 className="text-muted me-2">
+              <s></s>
+            </h4>
+          </div>
+
+          <h2 className="fw-bold mb-3 text-danger"></h2>
+
+          <p className="mb-3 small text-muted">Termasuk biaya sertifikasi BNSP</p>
+
+          <motion.a href="#form-registration" className="btn btn-danger btn-sm px-4 py-2" whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
+            Daftar Sekarang
+          </motion.a>
+        </div>
+      </section>
+
+      {/* Registration Form */}
+      <section id="form-registration" className="py-4">
+        <div className="container-fluid">
+          <div className="row justify-content-center">
+            <div className="col-12">
+              <div className="card border-0 shadow-sm rounded-0">
+                <div className="p-3 p-md-4">
+                  <div className="row align-items-center">
+                    <div className="col-lg-6 mb-4 mb-lg-0 px-4">
+                      <h4 className="fw-semibold mb-3">Form Pendaftaran</h4>
+                      <p className="text-muted small mb-3">Silakan isi formulir untuk mendaftar pelatihan Fotografi.</p>
+                      <img src="https://campusdigital.id/assets/images/illustration/customer-service.svg" alt="Customer Service" className="img-fluid" />
+                    </div>
+
+                    <div className="col-lg-6 px-4">
+                      <form onSubmit={handleSubmit}>
+                        <div className="mb-2">
+                          <label htmlFor="nama_lengkap" className="form-label small">
+                            Nama Lengkap
+                          </label>
+                          <input type="text" className="form-control form-control-sm" id="nama_lengkap" placeholder="Nama Lengkap" required />
+                        </div>
+
+                        <div className="mb-2">
+                          <label htmlFor="instansi" className="form-label small">
+                            Instansi
+                          </label>
+                          <input type="text" className="form-control form-control-sm" id="instansi" placeholder="Instansi" required />
+                        </div>
+
+                        <div className="mb-2">
+                          <label htmlFor="email" className="form-label small">
+                            Email
+                          </label>
+                          <input type="email" className="form-control form-control-sm" id="email" placeholder="Email" required />
+                        </div>
+
+                        <div className="mb-3">
+                          <label htmlFor="nomor_hp" className="form-label small">
+                            No HP / WhatsApp
+                          </label>
+                          <input type="tel" className="form-control form-control-sm" id="nomor_hp" placeholder="No HP / WhatsApp" required />
+                        </div>
+
+                        <motion.button type="submit" className="btn btn-primary w-100 py-2 fw-medium" whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
+                          Daftar Sekarang
+                        </motion.button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };

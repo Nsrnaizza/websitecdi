@@ -2,7 +2,7 @@ import DeveloperComponent from "../../components/Reguler/DeveloperComponent";
 
 const WebDeveloperPage = () => {
   return (
-    <div>
+    <div className='padding-30'>
       <DeveloperComponent />
     </div>
   );

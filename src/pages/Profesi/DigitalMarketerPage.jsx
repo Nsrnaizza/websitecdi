@@ -2,7 +2,7 @@ import DigitalMarketerComponent from "../../components/Profesi/DigitalMarketerCo
 
 const DigitalMarketerPage = () => {
   return (
-    <div>
+    <div className='padding-30'>
       <DigitalMarketerComponent />
     </div>
   );

@@ -2,7 +2,7 @@ import UjiKompetensiDigitalComponent from "../../components/Corporate/UjiKompete
 
 const UjiKompetensiDigitalPage = () => {
   return (
-    <div>
+    <div className='padding-30'>
       <UjiKompetensiDigitalComponent />
     </div>
   );

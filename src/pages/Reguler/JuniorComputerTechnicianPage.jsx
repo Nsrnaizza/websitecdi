@@ -2,7 +2,7 @@ import JuniorComponent from "../../components/Reguler/JuniorComponent";
 
 const JuniorComputerTechnicianPage = () => {
   return (
-    <div>
+    <div className='padding-30'>
       <JuniorComponent />
     </div>
   );

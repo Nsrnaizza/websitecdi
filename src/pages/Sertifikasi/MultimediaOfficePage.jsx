@@ -2,7 +2,7 @@ import MultimediaOfficeComponent from "../../components/Sertifikasi/MultimediaOf
 
 const MultimediaOfficePage = () => {
   return (
-    <div>
+    <div className='padding-30'>
       <MultimediaOfficeComponent />
     </div>
   );

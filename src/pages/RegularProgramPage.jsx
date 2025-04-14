@@ -3,7 +3,8 @@ import { Container, Row, Col } from "react-bootstrap";
 
 const RegularProgramPage = () => {
   return (
-    <section className="d-flex flex-column min-vh-100">
+    <section className="d-flex flex-column min-vh-100 ">
+      <div className="padding-30">
       <Container className="py-5 my-auto">
         <Row className="justify-content-center">
           <Col md={30}>
@@ -11,6 +12,7 @@ const RegularProgramPage = () => {
           </Col>
         </Row>
       </Container>
+      </div>
     </section>
   );
 };

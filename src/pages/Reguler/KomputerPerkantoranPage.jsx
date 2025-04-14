@@ -2,7 +2,7 @@ import PerkantoranComponent from "../../components/Reguler/PerkantoranComponent"
 
 const KomputerPerkantoranPage = () => {
   return (
-    <div>
+    <div className='padding-30'>
       <PerkantoranComponent />
     </div>
   );

@@ -2,7 +2,7 @@ import PraktekKerjaIndustriComponent from "../../components/Corporate/PraktekKer
 
 const PraktekKerjaIndustriPage = () => {
   return (
-    <div>
+    <div className='padding-30'>
       <PraktekKerjaIndustriComponent />
     </div>
   );

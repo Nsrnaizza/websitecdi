@@ -1,6 +1,8 @@
 const HubungiKamiPage = () => {
   return (
-    <div></div>
+    <div className='padding-80'>
+
+    </div>
   )
 }
 

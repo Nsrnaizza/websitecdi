@@ -2,7 +2,7 @@ import BudayaKerjaComponent from "../../components/BudayaKerjaComponent";
 
 const BudayaKerjaPage = () => {
   return (
-    <div>
+    <div className='padding-30'>
       <BudayaKerjaComponent />
     </div>
   );

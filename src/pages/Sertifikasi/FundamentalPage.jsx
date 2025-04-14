@@ -2,7 +2,7 @@ import FundamentalComponent from "../../components/Sertifikasi/FundamentalCompon
 
 const FundamentalPage = () => {
   return (
-    <div>
+    <div className='padding-30'>
       <FundamentalComponent />
     </div>
   );

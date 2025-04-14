@@ -2,7 +2,7 @@ import DigitalMarketingComponent from "../../components/Reguler/DigitalMarketing
 
 const DigitalMarketingPage = () => {
   return (
-    <div>
+    <div className='padding-30'>
       <DigitalMarketingComponent />
     </div>
   );

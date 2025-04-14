@@ -2,7 +2,7 @@ import InHouseTrainingComponent from "../../components/Corporate/InHouseTraining
 
 const InHouseTrainingPage = () => {
   return (
-    <div>
+    <div className='padding-30'>
       <InHouseTrainingComponent />
     </div>
   );

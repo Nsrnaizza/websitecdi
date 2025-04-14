@@ -2,7 +2,7 @@ import GameComponent from "../../components/Reguler/GameComponent";
 
 const GameDeveloperPage = () => {
   return (
-    <div>
+    <div className='padding-30'>
       <GameComponent />
     </div>
   );

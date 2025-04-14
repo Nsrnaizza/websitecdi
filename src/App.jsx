@@ -1,4 +1,8 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
+import Sidebar from "./components/SidebarComponent";
+import Dashboard from "./pages/Dashboard";
+import DataRole from "./pages/DataRolePage";
+import RoleManagement from "./pages/RoleManagementPage";
 
 import NavbarComponent from "./components/NavbarComponent";
 import FooterComponent from "./components/FooterComponent";
@@ -9,6 +13,8 @@ import GaleryPage from "./pages/GaleryPage";
 
 import AfiliasiPage from "./pages/AfiliasiPage";
 import ArtikelPage from "./pages/ArtikelPage";
+import DetailArticle from "./pages/DetailArticle";
+import ArticleAuthor from "./pages/ArticleAuthor";
 import HubungiKamiPage from "./pages/HubungiKamiPage";
 import RegularProgramPage from "./pages/RegularProgramPage";
 import CorporateProgramPage from "./pages/CorporateProgramPage";
@@ -50,61 +56,86 @@ import UMKMGoDigitalPage from "./pages/Corporate/UMKMGoDigitalPage";
 
 import RegisterPage from "./pages/RegisterPage";
 import LoginPage from "./pages/LoginPage";
+// import AdminPage from "./pages/AdminPage";
 
 function App() {
+  const location = useLocation();
+
+  // Daftar rute yang menggunakan Sidebar
+  const adminRoutes = ["/dashboard", "/datarole", "/rolemanagement"];
+
+  // Periksa apakah halaman saat ini adalah halaman admin
+  const isAdminPage = adminRoutes.some((route) => location.pathname.startsWith(route));
+
   return (
     <div>
-      <NavbarComponent />
+      {/* Render HeaderComponent dan FooterComponent hanya jika bukan halaman admin */}
+      {!isAdminPage && <NavbarComponent />}
 
       <Routes>
-        <Route path="/" Component={BerandaPage} />
-        <Route path="/tentangkami/sejarah" Component={SejarahPage} />
-        <Route path="/tentangkami/visi-misi" Component={VisiMisiPage} />
-        <Route path="/tentangkami/budaya-kerja" Component={BudayaKerjaPage} />
-        <Route path="/tentangkami/fasilitas-keunggulan" Component={FasilitasKeunggulanPage} />
-        <Route path="/cabang" Component={CabangPage} />
-        <Route path="/galery" Component={GaleryPage} />
-        <Route path="/afiliasi" Component={AfiliasiPage} />
-        <Route path="/artikel" Component={ArtikelPage} />
-        <Route path="/hubungiKami" Component={HubungiKamiPage} />
-        <Route path="/program-reguler" Component={RegularProgramPage} />
-        <Route path="/program-corporate" Component={CorporateProgramPage} />
-        <Route path="/program-profesi" Component={ProfesiProgramPage} />
-        <Route path="/program-sertifikasi" Component={ProgramSertifikasiPage} />
-        <Route path="/internprogram" Component={MagangPage} />
-        <Route path="/reguler/digital-marketing" Component={DigitalMarketingPage} />
-        <Route path="/reguler/graphic-design" Component={GraphicDesignPage} />
-        <Route path="/reguler/operator-komputer" Component={KomputerPerkantoranPage} />
-        <Route path="/reguler/web-designer" Component={WebDesignerPage} />
-        <Route path="/reguler/web-developer" Component={WebDeveloperPage} />
-        <Route path="/reguler/video-editor" Component={VideoEditorPage} />
-        <Route path="/reguler/photography" Component={FotografiPage} />
-        <Route path="/reguler/multimedia" Component={MultimediaPage} />
-        <Route path="/reguler/game-developer" Component={GameDeveloperPage} />
-        <Route path="/reguler/social-media-specialist" Component={SocialMediaSpecialistPage} />
-        <Route path="/reguler/mobile-programing" Component={MobileProgrammerPage} />
-        <Route path="/reguler/junior-computer" Component={JuniorComputerTechnicianPage} />
-        <Route path="/corporate/kompetensi-digital-marketing" Component={KompetensiDigitalMarketingPage} />
-        <Route path="/corporate/praktek-kerja-industri" Component={PraktekKerjaIndustriPage} />
-        <Route path="/corporate/industri-teknologi-digital" Component={KelasIndustriPage} />
-        <Route path="/corporate/training-for-trainer" Component={TrainingForTrainerPage} />
-        <Route path="/corporate/uji-kompetensi-teknologi-digital" Component={UjiKompetensiDigitalPage} />
-        <Route path="/corporate/beasiswa" Component={BeasiswaPage} />
-        <Route path="/corporate/inhouse-training" Component={InHouseTrainingPage} />
-        <Route path="/corporate/umkm-go-digital" Component={UMKMGoDigitalPage}/>
-        <Route path="/Program/digital-marketer" Component={DigitalMarketerPage}/>
-        <Route path="/program/digital-technopreneur" Component={TechnopreneurPage}/>
-        <Route path="/program/network-infrastructure-iot-and-services" Component={NetworkPage} />
-        <Route path="/program/software-development-and-data-science" Component={SoftwarePage} />
-        <Route path ="/program/multimedia-and-office" Component={MultimediaOfficePage}/>
-        <Route path ="/program/project-management-and-quality" Component={ManagementPage}/>
-        <Route path ="/program/digital-marketing-and-it-fundamental" Component={Fundamentalpage}/>
-        <Route path ="/program/Fiber-optic" Component={FiberPage}/>
-        <Route path ="/register" Component={RegisterPage}/>
-        <Route path ="/login" Component={LoginPage}/>
+        <Route path="/" element={<BerandaPage />} />
+        <Route path="/tentangkami/sejarah" element={<SejarahPage />} />
+        <Route path="/tentangkami/visi-misi" element={<VisiMisiPage />} />
+        <Route path="/tentangkami/budaya-kerja" element={<BudayaKerjaPage />} />
+        <Route path="/tentangkami/fasilitas-keunggulan" element={<FasilitasKeunggulanPage />} />
+        <Route path="/cabang" element={<CabangPage />} />
+        <Route path="/galery" element={<GaleryPage />} />
+        <Route path="/afiliasi" element={<AfiliasiPage />} />
+        <Route path="/artikel" element={<ArtikelPage />} />
+        <Route path="/detailartikel/:id" Component={DetailArticle} />
+        <Route path="/articles/author" Component={ArticleAuthor} />
+        <Route path="/hubungiKami" element={<HubungiKamiPage />} />
+        <Route path="/program-reguler" element={<RegularProgramPage />} />
+        <Route path="/program-corporate" element={<CorporateProgramPage />} />
+        <Route path="/program-profesi" element={<ProfesiProgramPage />} />
+        <Route path="/program-sertifikasi" element={<ProgramSertifikasiPage />} />
+        <Route path="/program/magang/internprogram" element={<MagangPage />} />
+        <Route path="/reguler/digital-marketing" element={<DigitalMarketingPage />} />
+        <Route path="/reguler/graphic-design" element={<GraphicDesignPage />} />
+        <Route path="/reguler/operator-komputer" element={<KomputerPerkantoranPage />} />
+        <Route path="/reguler/web-designer" element={<WebDesignerPage />} />
+        <Route path="/reguler/web-developer" element={<WebDeveloperPage />} />
+        <Route path="/reguler/video-editor" element={<VideoEditorPage />} />
+        <Route path="/reguler/photography" element={<FotografiPage />} />
+        <Route path="/reguler/multimedia" element={<MultimediaPage />} />
+        <Route path="/reguler/game-developer" element={<GameDeveloperPage />} />
+        <Route path="/reguler/social-media-specialist" element={<SocialMediaSpecialistPage />} />
+        <Route path="/reguler/mobile-programing" element={<MobileProgrammerPage />} />
+        <Route path="/reguler/junior-computer" element={<JuniorComputerTechnicianPage />} />
+        <Route path="/corporate/kompetensi-digital-marketing" element={<KompetensiDigitalMarketingPage />} />
+        <Route path="/corporate/praktek-kerja-industri" element={<PraktekKerjaIndustriPage />} />
+        <Route path="/corporate/industri-teknologi-digital" element={<KelasIndustriPage />} />
+        <Route path="/corporate/training-for-trainer" element={<TrainingForTrainerPage />} />
+        <Route path="/corporate/uji-kompetensi-teknologi-digital" element={<UjiKompetensiDigitalPage />} />
+        <Route path="/corporate/beasiswa" element={<BeasiswaPage />} />
+        <Route path="/corporate/inhouse-training" element={<InHouseTrainingPage />} />
+        <Route path="/corporate/umkm-go-digital" element={<UMKMGoDigitalPage />} />
+        <Route path="/Program/digital-marketer" element={<DigitalMarketerPage />} />
+        <Route path="/program/digital-technopreneur" element={<TechnopreneurPage />} />
+        <Route path="/program/network-infrastructure-iot-and-services" element={<NetworkPage />} />
+        <Route path="/program/software-development-and-data-science" element={<SoftwarePage />} />
+        <Route path="/program/multimedia-and-office" element={<MultimediaOfficePage />} />
+        <Route path="/program/project-management-and-quality" element={<ManagementPage />} />
+        <Route path="/program/digital-marketing-and-it-fundamental" element={<Fundamentalpage />} />
+        <Route path="/program/Fiber-optic" element={<FiberPage />} />
+        <Route path="/register" element={<RegisterPage />} />
+        <Route path="/login" element={<LoginPage />} />
+        {/* <Route path ="/admin" element={<AdminPage/>}/> */}
       </Routes>
+      {!isAdminPage && <FooterComponent />}
 
-      <FooterComponent />
+      {isAdminPage && (
+        <div className="d-flex">
+          <Sidebar />
+          <div style={{ marginLeft: isAdminPage ? "80px" : "280px", padding: "20px", width: "100%" }}>
+            <Routes>
+              <Route path="/dashboard" element={<Dashboard />} />
+              <Route path="/datarole" element={<DataRole />} />
+              <Route path="/rolemanagement" element={<RoleManagement />} />
+            </Routes>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

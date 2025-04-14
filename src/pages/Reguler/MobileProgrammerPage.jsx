@@ -2,7 +2,7 @@ import MobileComponent from "../../components/Reguler/MobileComponent";
 
 const MobileProgrammerPage = () => {
   return (
-    <div>
+    <div className='padding-30'>
       <MobileComponent />
     </div>
   );

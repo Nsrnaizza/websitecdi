@@ -1,4 +1,4 @@
-import api from "./Api"; // Pastikan API sudah dikonfigurasi
+import api from "./api"; // Pastikan API sudah dikonfigurasi
 
 export const getCabangs = async () => {
     try {

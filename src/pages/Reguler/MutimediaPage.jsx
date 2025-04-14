@@ -2,7 +2,7 @@ import MultimediaComponent from "../../components/Reguler/MultimediaComponent";
 
 const MultimediaPage = () => {
   return (
-    <div>
+    <div className='padding-30'>
       <MultimediaComponent />
     </div>
   );

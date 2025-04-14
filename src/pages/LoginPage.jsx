@@ -2,7 +2,7 @@ import LoginComponent from '../components/LoginComponent';
 
 const LoginPage = () => {
     return (
-        <div>
+        <div className='padding-30'>
         <LoginComponent />
         </div>
     );

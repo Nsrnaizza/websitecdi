@@ -1,6 +1,7 @@
 import "../../dist/css/main.css";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 const TechnopreneurComponent = () => {
   const navigate = useNavigate();
@@ -40,163 +41,286 @@ const TechnopreneurComponent = () => {
           </nav>
         </div>
       </div>
+
       {/* Pelatihan Info */}
-      <div className="container training-info bg-light-puple text-center p-4 rounded shadow mt-5">
-        <h2>
-          Pelatihan Cepat <span>7 Hari Langsung Ujian</span>
-        </h2>
-        <h3>
-          Sertifikasi <b>Digital Technopreneur</b> BNSP
-        </h3>
-        <img className="bnsp-logo" src="https://campusdigital.id/assets/images/bnsp/logo_bnsp.png" alt="BNSP-LOGO" />
-        <p>Program pembelajaran online via Zoom atau offline tatap muka untuk Anda yang membutuhkan sertifikat BNSP di bidang Digital Technopreneur.</p>
-        <a href="#form-registration" className="btn-register">
-          DAFTAR SEKARANG
-        </a>
-      </div>
-      {/* Mengapa? */}
-      <div className="raeseon-container">
-        <div className="reasons-section">
-          <h3>
-            Mengapa Harus Menguasai <span className="highlight">Digital Technopreneur?</span>
-          </h3>
-          <p>
-            Mengikuti program uji kompetensi teknologi digital adalah langkah yang penting dalam mengukur kemampuan Anda, mendapatkan pengakuan resmi, dan meningkatkan peluang karier Anda dalam bidang teknologi digital. Ini adalah investasi
-            dalam pengembangan diri dan pembuktian kemampuan Anda dalam industri yang terus berkembang pesat ini.
-          </p>
-          <ul>
-            <li>Mengukur keterampilan dan pengetahuan</li>
-            <li>Memahami potensi bisnis di era digital</li>
-            <li>Pengembangan keterampilan dan pengetahuan</li>
-            <li>Jaringan dan kolaborasi</li>
-            <li>Pemahaman riset pasar dan perilaku konsumen</li>
-            <li>Pemahaman inovasi dan disrupsi bisnis</li>
-          </ul>
-        </div>
-      </div>
-      {/* Manfaat */}
-      <div className="benefits-section">
-        <h3>
-          Manfaat Pelatihan <span className="highlight">Digital Technopreneur</span>
-        </h3>
-        <p>
-        Dengan mengikuti program Digital Technopreneur, peserta dapat memperoleh manfaat yang signifikan dalam mengembangkan bisnis digital mereka. Mereka dapat menguasai teknologi terkini, mengembangkan keterampilan kewirausahaan yang relevan, memanfaatkan peluang bisnis digital, membangun jaringan yang kuat, mendapatkan bimbingan dari para ahli, dan melindungi bisnis mereka dari risiko digital. Semua ini membantu peserta untuk menjadi pengusaha digital yang sukses dan adaptif di era digital yang terus berkembang.
-        </p>
-        <ul>
-          <li>Pemahaman mendalam tentang berbagai teknologi digital</li>
-          <li>Membantu mengembangkan keterampilan kewirausahaan</li>
-          <li>Medapatkan Wawasan tentang tren dan peluang bisnis digital.</li>
-        </ul>
-      </div>
-      {/* Materi Pelatihan */}
-      <section className="materi-pelatihan">
+       <section className="py-5 bg-light">
         <div className="container">
-          <div className="row m-md-3 m-sm-3">
-            <div className="card title">
-              <h3 className="mb-4 mt-3 text-center">
-                Materi Pelatihan <span style={{ color: "red" }}>Digital Technopreneur</span>
-              </h3>
-              <div className="row p-lg-4 p-md-2 p-sm-1">
-                {[
-                  {
-                    title: "Digital Business Strategy",
-                    content: "Mendukung Tugas Tugas Administratif Dan Operasional Lingkungan Kantor",
-                  },
-                  {
-                    title: "Branding",
-                    content: "Memasarkan Produk Menggunakan Platform Online",
-                  },
-                  {
-                    title: "Product Analysis",
-                    content: "Menciptakan Visual Yang Menarik Dan Komunikatif",
-                  },
-                  {
-                    title: "Tren Research",
-                    content: "Menciptakan Tampilan Visual Dan Struktur Web",
-                  },
-                  {
-                    title: "Data & Analytics",
-                    content: "Membangun Web Yang Berjalan Di Internet",
-                  },
-                  {
-                    title: "Content Digital",
-                    content: "Mengubah Video Agar Menjadi Konten Yang Menarik",
-                  },
-                  {
-                    title: "Facebook Marketing",
-                    content: "Mengambil Gambar Dan Menyesuaikan Komposisi Visual",
-                  },
-                  {
-                    title: "Inatagram Marketing",
-                    content: "Membuat Video, Animasi, Dll",
-                  },
-                  {
-                    title: "Youtube Marketing",
-                    content: "Membuat Game, Pengujian Game, Dan Peluncuran Game",
-                  },
-                  {
-                    title: "Tiktok Marketing",
-                    content: "Mengelola Dan Mengoptimalkan Kehadiran Di Media Sosial",
-                  },
-                  {
-                    title: "Google Ads. Fb Ads. lg Ads",
-                    content: "Mengembangkan Aplikasi Untuk Digunakan Pada Perangkat Mobile",
-                  },
-                  {
-                    title: "Website Marketing.SEO.SEM",
-                    content: "Mengambil Gambar Dan Menyesuaikan Komposisi Visual",
-                  },
-                  {
-                    title: "Marketplace Marketing",
-                    content: "Membuat Video, Animasi, Dll",
-                  },
-                  {
-                    title: "Google My Business",
-                    content: "Membuat Game, Pengujian Game, Dan Peluncuran Game",
-                  },
-                  {
-                    title: "Operational Profitability",
-                    content: "Mengelola Dan Mengoptimalkan Kehadiran Di Media Sosial",
-                  },
-                  {
-                    title: "Financial Literacy",
-                    content: "Mengembangkan Aplikasi Untuk Digunakan Pada Perangkat Mobile",
-                  },
-                ].map((item, index) => (
-                  <div className="col-lg-4 col-sm-6" key={index}>
-                    <div className="card border-0 shadow-sm mb-4 size-manfaat">
-                      <div className="card-header d-flex justify-content-between" id={`heading${index}`}>
-                        <button className="btn btn-collapse" type="button" onClick={() => toggleCollapse(index)} aria-expanded={activeIndex === index} aria-controls={`collapse${index}`}>
-                          <span>{item.title}</span>
-                          <i className={`fa fa-angle-up ${activeIndex === index ? "rotate" : ""}`}></i>
-                        </button>
-                      </div>
-                      <div id={`collapse${index}`} className={`collapse ${activeIndex === index ? "show" : ""}`} aria-labelledby={`heading${index}`} data-bs-parent="#accordionExample">
-                      <div className="custom-content p-3 text-truncate-2 text-justify" style={{ fontSize: "13px", fontWeight:"normal"}}>
-                          {item.content.split("\n").map((paragraph, i) => (
-                            <p key={i}>{paragraph}</p>
-                          ))}
-                        </div>
-                      </div>
+          <motion.div 
+            className="card border-0 shadow-sm p-4 p-md-5 text-center"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+          >
+            <div className="row justify-content-center">
+              <div className="col-md-8">
+                <h2 className="fw-bold mb-3">
+                  Pelatihan Cepat <span className="text-danger">7 Hari Langsung Ujian</span>
+                </h2>
+                <h3 className="mb-4">
+                  Sertifikasi <span className="fw-bold text-danger">Digital Technopreneur</span> BNSP
+                </h3>
+                <img 
+                  src="https://campusdigital.id/assets/images/bnsp/logo_bnsp.png" 
+                  alt="BNSP-LOGO" 
+                  className="img-fluid mb-4"
+                  style={{ maxHeight: '100px' }}
+                />
+                <p className="lead mb-4" style={{ fontSize: '1rem' }}>
+                Progam Pembelajaran Online Via Zoom Meet atau Offline Tatap Muka Untuk Anda Yang Membutuhkan Sertifikat BNSP di Bidang Digital Technopreneur
+                </p>
+                <motion.a 
+                  href="#form-registration" 
+                  className="btn btn-danger btn-lg px-4 py-2"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  DAFTAR SEKARANG
+                </motion.a>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Mengapa? */}
+      <section className="py-5">
+             <div className="container">
+               <div className="row justify-content-center">
+                 <div className="col-lg-8 text-center mb-5">
+                   <h2 className="fw-bold mb-3">
+                     Mengapa Harus Menguasai <span className="text-danger">Digital Technopreneur?</span>
+                   </h2>
+                 </div>
+               </div>
+               
+               <div className="row g-4">
+                 {[
+                   "Untuk mempersiapkan diri di era digital",
+                   "Memahami potensi bisnis di era digital",
+                   "Pengembangan keterampilan dan pengetahuan",
+                   "Jaringan dan kolaborasi",
+                   "Pemahaman riset pasar dan perilaku konsumen",
+                   "Pemahaman inovasi dan disrupsi bisnis"
+                 ].map((item, index) => (
+                   <div className="col-md-6 col-lg-4" key={index}>
+                     <motion.div 
+                       className="card border-0 shadow-sm h-100"
+                       initial={{ opacity: 0, y: 30 }}
+                       whileInView={{ opacity: 1, y: 0 }}
+                       transition={{ delay: index * 0.1, duration: 0.5 }}
+                       viewport={{ once: true }}
+                     >
+                       <div className=" p-4">
+                         <div className="d-flex align-items-start">
+                           <div className="bg-primary bg-opacity-10 p-2 rounded me-3">
+                             <i className="bi bi-check-circle-fill text-primary"></i>
+                           </div>
+                           <p className="mb-0">{item}</p>
+                         </div>
+                       </div>
+                     </motion.div>
+                   </div>
+                 ))}
+               </div>
+             </div>
+           </section>
+
+      {/* Manfaat */}
+       <section className="py-5 bg-light">
+        <div className="container">
+          <div className="row justify-content-center">
+            <div className="col-lg-10">
+              <div className="text-center mb-5">
+                <h2 className="fw-bold mb-3">
+                  Manfaat Pelatihan <span className="text-danger">Digital Technopreneur</span>
+                </h2>
+                <p className="lead text-muted">
+                  Apa yang akan Anda dapatkan dari pelatihan ini
+                </p>
+              </div>
+              
+              <div className="row g-4">
+                <div className="col-lg-6">
+                  <div className="card border-0 h-100 shadow-sm">
+                    <div className=" p-4">
+                      <p className="mb-4">
+                      Dengan mengikuti program <strong>Digital Technopreneur</strong>, peserta dapat memperoleh manfaat yang signifikan dalam mengembangkan bisnis digital mereka. 
+                      </p>
+                      <p>
+                      Mereka dapat menguasai teknologi terkini, mengembangkan keterampilan kewirausahaan yang relevan, memanfaatkan peluang bisnis digital, membangun jaringan yang kuat, mendapatkan bimbingan dari para ahli, dan melindungi bisnis mereka dari risiko digital. Semua ini membantu peserta untuk menjadi pengusaha digital yang sukses dan adaptif di era digital yang terus berkembang.
+                      </p>
                     </div>
                   </div>
-                ))}
+                </div>
+                
+                <div className="col-lg-6">
+                  <div className="card border-0 h-100 shadow-sm">
+                    <div className=" p-4">
+                      <h5 className="mb-3">Yang akan Anda pelajari:</h5>
+                      <ul className="list-unstyled">
+                        {[
+                          "Pemahaman mendalam tentang berbagai teknologi digital",
+                          "Membantu mengembangkan keterampilan kewirausahaan",
+                          "Medapatkan Wawasan tentang tren dan peluang bisnis digital."
+                        ].map((item, index) => (
+                          <li key={index} className="mb-2 d-flex align-items-start">
+                            <i className="bi bi-check-circle-fill text-primary me-2 mt-1"></i>
+                            <span>{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
+      {/* Materi Pelatihan */}
+      <section className="py-5">
+  <div className="container">
+    <div className="text-center mb-5">
+      <h2 className="fw-bold mb-3">
+        Materi Pelatihan <span className="text-danger">Digital Marketing</span>
+      </h2>
+      <p className="lead text-muted">
+        Kurikulum lengkap untuk menjadi Digital Marketing profesional
+      </p>
+    </div>
+    
+    <div className="row g-4">
+                {[
+                  {
+                    title: "Digital Business Strategy",
+                    content: "Mengembangkan Dan Mengelola Bisnis Secara Digital",
+                  },
+                  {
+                    title: "Branding",
+                    content: "Membangun Citra Dan Identitas Yang Khas Untuk Suatu Produk",
+                  },
+                  {
+                    title: "Product Analysis",
+                    content: "Membangun Citra Dan Identitas Yang Khas Untuk Suatu Produk",
+                  },
+                  {
+                    title: "Tren Research",
+                    content: "Mengidentifikasi Dan Memahami Tren Yang Sedang Terjadi",
+                  },
+                  {
+                    title: "Data & Analytics",
+                    content: " Memahami Dan Menerapkan Konsep, Teknik, Dan Alat Alat Untuk Menganalisis Untuk Medapatkan Wawasan Bisnis",
+                  },
+                  {
+                    title: "Content Digital",
+                    content: "Mengenal Dan Memahami Konten, Membuat Konten Foto, Artikel, Video",
+                  },
+                  {
+                    title: "Facebook Marketing",
+                    content: "Memasarkan Suatu Produk Di Platform Facebook",
+                  },
+                  {
+                    title: "Inatagram Marketing",
+                    content: "Memasarkan Suatu Produk Di Platform Instagram",
+                  },
+                  {
+                    title: "Youtube Marketing",
+                    content: "Memasarkan Suatu Produk Di Platform Youtube",
+                  },
+                  {
+                    title: "Tiktok Marketing",
+                    content: "MMemasarkan Suatu Produk Di Platform Tiktok",
+                  },
+                  {
+                    title: "Google Ads. Fb Ads. lg Ads",
+                    content: "Menampilkan Iklan Pada Platform Google, Facebook, Dan Instagram",
+                  },
+                  {
+                    title: "Website Marketing.SEO.SEM",
+                    content: "Memanfaatkan Strategi Pemasaran Digital",
+                  },
+                  {
+                    title: "Marketplace Marketing",
+                    content: "Mempromosikan Produk Dan Penjualan Produk Melalui Marketplace",
+                  },
+                  {
+                    title: "Google My Business",
+                    content: "Mengelola Dan Menampilkan Informasi Bisnis Secara Online",
+                  },
+                  {
+                    title: "Operational Profitability",
+                    content: "Mengukur Keuntungan Perusahaan Dari Semua Kegiatan Operasional",
+                  },
+                  {
+                    title: "Financial Literacy",
+                    content: "Melatih Kemampuan Untuk Memahami Dan Mengelola Kauangan Dengan Baik",
+                  },
+                ].map((item, index) => (
+                  <div className="col-md-6 col-lg-4" key={index}>
+                    <motion.div
+                      className="card border-0 shadow-sm h-100"
+                      initial={{ opacity: 0, y: 30 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ delay: index * 0.1, duration: 0.5 }}
+                      viewport={{ once: true }}
+                    >
+                      <div 
+                        className="card-header bg-white border-0 p-0"
+                        onClick={() => toggleCollapse(index)}
+                      >
+                        <button 
+                          className="btn w-100 text-start p-3 d-flex justify-content-between align-items-center"
+                          aria-expanded={activeIndex === index}
+                        >
+                          <span className="fw-medium">{item.title}</span>
+                          <i className={`bi ${activeIndex === index ? 'bi-chevron-up' : 'bi-chevron-down'}`}></i>
+                        </button>
+                      </div>
+                      <div className={`collapse ${activeIndex === index ? 'show' : ''}`}>
+                        <div className="p-3 pt-0">
+                          <p className="text-muted">{item.content}</p>
+                        </div>
+                      </div>
+                    </motion.div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+
       {/* Biaya Investasi */}
-      <div className="pricing-section text-center">
-        <h2>
-          Berapa Biaya Investasi Pelatihan <span>Digital Technopreneur ?</span>
-        </h2>
-        <h3 className="discount-price">
-          <s>16.000.000</s>
-        </h3>
-        <h1 className="final-price">15.000.000</h1>
-        <h3>Termasuk biaya sertifikasi BNSP</h3>
-      </div>
+      <section className="py-4 bg-light border-top border-bottom">
+  <div className="container text-center">
+    <h3 className="fw-bold mb-3">
+      Berapa Biaya Inevstasi Pelatihan <span className="text-danger">Digital Technopreneur?</span>
+    </h3>
+
+    <div className="d-flex justify-content-center align-items-baseline mb-2">
+      <h4 className="text-muted me-2">
+        <s>Rp 16.000.000</s>
+      </h4>
+      <span className="badge bg-success bg-opacity-10 text-success px-2 py-1 small">
+        Hemat Rp 1.000.000
+      </span>
+    </div>
+
+    <h2 className="fw-bold mb-3 text-danger">Rp 15.000.000</h2>
+
+    <p className="mb-3 small text-muted">Termasuk biaya sertifikasi BNSP</p>
+
+    <motion.a 
+      href="#form-registration" 
+      className="btn btn-danger btn-sm px-4 py-2"
+      whileHover={{ scale: 1.03 }}
+      whileTap={{ scale: 0.97 }}
+    >
+      Daftar Sekarang
+    </motion.a>
+  </div>
+</section>
+
+
       {/* Form Pendaftaran */}
       <div className="registration-section">
         <h5>Form Pendaftaran</h5>
